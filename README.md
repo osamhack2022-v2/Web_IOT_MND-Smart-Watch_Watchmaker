@@ -78,11 +78,13 @@ npm install
 ```
 **nodemon 설치**  
 /WEB(BE)/ 디렉터리에서  
-`npm install -g nodemon --save-dev`
+```npm install -g nodemon --save-dev
+```
 
 **sqlite 설치**  
 /WEB(BE)/ 디렉터리에서  
-`npm install sqlite3`
+```npm install sqlite3
+```
 
 **vue.js 설치**  
 /WEB(FE)/ 디렉터리에서
