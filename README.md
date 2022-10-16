@@ -53,11 +53,11 @@ soon
 
 # 프로젝트 사용법(Getting Started)
 **백엔드 구동**
-/WEB(BE)/ 디렉터리에서
+/WEB(BE) 디렉터리에서  
 `npm run dev `
 
 **프론트엔드 구동**
-/WEB(FE)/ 디렉터리에서
+/WEB(FE) 디렉터리에서  
 `npm run serve`
 
 
@@ -71,23 +71,25 @@ https://nodejs.org/en/
 n lts
 ```
 **express 설치**  
-/WEB(BE)/ 디렉터리에서  
+/WEB(BE) 디렉터리에서  
 ```npm install -g express-generator
 express --view=pug backend
 npm install
 ```
 **nodemon 설치**  
-/WEB(BE)/ 디렉터리에서  
-```npm install -g nodemon --save-dev
+/WEB(BE) 디렉터리에서  
+```
+npm install -g nodemon --save-dev
 ```
 
 **sqlite 설치**  
-/WEB(BE)/ 디렉터리에서  
-```npm install sqlite3
+/WEB(BE) 디렉터리에서  
+```
+npm install sqlite3
 ```
 
 **vue.js 설치**  
-/WEB(FE)/ 디렉터리에서
+/WEB(FE) 디렉터리에서
 ```npm i @vue/cli-service 
 npm i @vue/cli-plugin-babel 
 npm i @vue/cli-plugin-eslint 
@@ -100,17 +102,17 @@ npm install vuex
 # ✏기술 스택(Technique Used)
 
 ### Infra
-|<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">|<img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">|<img src="https://img.shields.io/badge/kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white">|<img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">|
-|:---:|:---:|:---:|:---:|
+|<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">|<img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">|<img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">|
+|:---:|:---:|:---:|
 
 
 ### Front-End
-|<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">|<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">|<img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">|
+|<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">|<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">|<img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">|<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">|<img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">|
 |:---:|:---:|:---:|:---:|:---:|
 
 
 ### Back-End
-|<img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">|<img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">|
+|<img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">|<img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">|<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">|
 |:---:|:---:|:---:|
 
 
