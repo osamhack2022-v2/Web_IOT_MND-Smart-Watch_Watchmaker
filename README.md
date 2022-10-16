@@ -63,28 +63,28 @@ soon
 
 # 📖설치 안내(Installation Process)
 
-**node.js LTS 버전 설치**
+**node.js LTS 버전 설치**  
 https://nodejs.org/en/
 
 **이전 버전의 node.js인 경우 LTS 버전으로 업데이트하기**
 ```npm install -g n
 n lts
 ```
-**express 설치**
-/WEB(BE)/ 디렉터리에서
+**express 설치**  
+/WEB(BE)/ 디렉터리에서  
 ```npm install -g express-generator
 express --view=pug backend
 npm install
 ```
-**nodemon 설치**
-/WEB(BE)/ 디렉터리에서
+**nodemon 설치**  
+/WEB(BE)/ 디렉터리에서  
 `npm install -g nodemon --save-dev`
 
-**sqlite 설치**
-/WEB(BE)/ 디렉터리에서
+**sqlite 설치**  
+/WEB(BE)/ 디렉터리에서  
 `npm install sqlite3`
 
-**vue.js 설치**
+**vue.js 설치**  
 /WEB(FE)/ 디렉터리에서
 ```npm i @vue/cli-service 
 npm i @vue/cli-plugin-babel 
