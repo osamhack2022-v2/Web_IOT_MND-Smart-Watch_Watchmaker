@@ -67,12 +67,14 @@ soon
 https://nodejs.org/en/
 
 **이전 버전의 node.js인 경우 LTS 버전으로 업데이트하기**
-```npm install -g n
+```
+npm install -g n
 n lts
 ```
 **express 설치**  
 /WEB(BE) 디렉터리에서  
-```npm install -g express-generator
+```
+npm install -g express-generator
 express --view=pug backend
 npm install
 ```
@@ -90,7 +92,8 @@ npm install sqlite3
 
 **vue.js 설치**  
 /WEB(FE) 디렉터리에서
-```npm i @vue/cli-service 
+```
+npm i @vue/cli-service 
 npm i @vue/cli-plugin-babel 
 npm i @vue/cli-plugin-eslint 
 npm install -g sass-migrator
