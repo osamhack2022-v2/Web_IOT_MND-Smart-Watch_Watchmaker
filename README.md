@@ -71,13 +71,17 @@ https://nodejs.org/en/
 npm install -g n
 n lts
 ```
+<!-- 
 **express 설치**  
+
+이거 안해도 돌아가는데요..?
 /WEB(BE) 디렉터리에서  
 ```
 npm install -g express-generator
-express --view=pug backend
+express --view=pug WEB(BE)
 npm install
 ```
+-->
 **nodemon 설치**  
 /WEB(BE) 디렉터리에서  
 ```
