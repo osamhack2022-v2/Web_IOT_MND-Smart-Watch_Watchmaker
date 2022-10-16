@@ -52,27 +52,41 @@ soon
 soon
 
 # 프로젝트 사용법(Getting Started)
-soon
+**백엔드 구동**
+/WEB(BE)/ 디렉터리에서
+`npm run dev `
+
+**프론트엔드 구동**
+/WEB(FE)/ 디렉터리에서
+`npm run serve`
+
 
 # 📖설치 안내(Installation Process)
-```
-**node.js 설치**
-https://nodejs.org/en/
-v16.17.1 설치
 
+**node.js LTS 버전 설치**
+https://nodejs.org/en/
+
+**이전 버전의 node.js인 경우 LTS 버전으로 업데이트하기**
+```npm install -g n
+n lts
+```
 **express 설치**
-/WEB(BE)/backend/ 디렉터리에서
-npm install -g express-generator
-$ express --view=pug backend
+/WEB(BE)/ 디렉터리에서
+```npm install -g express-generator
+express --view=pug backend
 npm install
+```
+**nodemon 설치**
+/WEB(BE)/ 디렉터리에서
+`npm install -g nodemon --save-dev`
 
 **sqlite 설치**
-/WEB(BE)/backend/ 디렉터리에서
-npm install sqlite3
+/WEB(BE)/ 디렉터리에서
+`npm install sqlite3`
 
 **vue.js 설치**
-/WEB(FE)/vue-argon-dashboard-main/ 디렉터리에서
-npm i @vue/cli-service 
+/WEB(FE)/ 디렉터리에서
+```npm i @vue/cli-service 
 npm i @vue/cli-plugin-babel 
 npm i @vue/cli-plugin-eslint 
 npm install -g sass-migrator
@@ -84,17 +98,17 @@ npm install vuex
 # ✏기술 스택(Technique Used)
 
 ### Infra
-|<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">|<img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">|<img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">|
-|:---:|:---:|:---:|
+|<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">|<img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">|<img src="https://img.shields.io/badge/kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white">|<img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">|
+|:---:|:---:|:---:|:---:|
 
 
 ### Front-End
-|<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">|<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">|<img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">|<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">|<img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">|
+|<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">|<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">|<img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">|
 |:---:|:---:|:---:|:---:|:---:|
 
 
 ### Back-End
-|<img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">|<img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">|<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">|
+|<img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">|<img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">|
 |:---:|:---:|:---:|
 
 
@@ -110,7 +124,7 @@ npm install vuex
 |:---:|:---:|:---:|:---:|
 |최수호| PM, 프론트/백엔드 개발|snp.sanso@gmail.com|[![Github Badge](https://img.shields.io/badge/Github-181717?style=flat&logo=Github&logoColor=white)](https://github.com/s4nso)
 |윤지성| 클라우드/인프라 개발|silanon65@gmail.com|[![Github Badge](https://img.shields.io/badge/Github-181717?style=flat&logo=Github&logoColor=white)](https://github.com/jise8893)
-|박원| Iot(Arduino) 개발|myself9875@gmail.com|[![Github Badge](https://img.shields.io/badge/Github-181717?style=flat&logo=Github&logoColor=white)](https://github.com/1park)
+|박원| 프론트/백엔드 개발|myself9875@gmail.com|[![Github Badge](https://img.shields.io/badge/Github-181717?style=flat&logo=Github&logoColor=white)](https://github.com/1park)
 
 
 
