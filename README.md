@@ -13,20 +13,16 @@
 # 💡기능 설명
 
 ### 웹 플랫폼
-
-- 관리자 로그인/로그아웃 기능
+- 각 부대 전력 시각화
+    - 전시 상황시 지휘체계
+    - 스마트워치의 기능으로 부대별 인원 확인
+    - 훈련/실제상황 발생시 심박수 데이터로 실시간 인원 및 위급상황자 확인
 - 인원 현황 대시보드
     - 각 병사 위치 확인 (출근, 퇴근, 격리, 시설이용 등)
-    - 휴가 및 외출 인원(군번, 출타시간, 휴가기간 등)
-    - 각 부대 전력 시각화 (훈련/실제상황 발생시 심박수 데이터로 실시간 인원 확인)
+    - 휴가 및 외출 인원(군번, 출타시간, 휴가기간 등) 
 - 전달 사항 / 특이사항
-- 전시 상황시 지휘체계 / 스마트워치의 기능으로 부대별 인원 확인
+- 관리자 로그인/로그아웃 기능
 
-### 클라우드
-
-- 쿠버네티스 / 도커
-- 웹서버(NodeJS) 및 데이터베이스(MongoDB), 아두이노 IDE 소켓 통신 구축
-- 네트워크 구성
 
 ### Iot(아두이노)
 스마트워치 하드웨어 구성(심박수, NFC, 디스플레이, 배터리, 보드 등) → 최대한 스마트워치 디자인
@@ -38,8 +34,8 @@ RFID/NFC 리더기(보드, RFID,NFC 리더) → 가능하다면 공군에서 사
 
 - **스마트워치**
 1. 시계 기능
-2. 심박수기능
-3. NFC/RFID
+2. 심박수 및 혈중산소포화도 측정 및 실시간 전송
+3. NFC/RFID 
 4. 특이사항보고
 
 
@@ -51,14 +47,14 @@ soon
 # 🔗시스템 구성도
 soon
 
-# 프로젝트 사용법(Getting Started)
-**백엔드 구동**
-/WEB(BE) 디렉터리에서  
-`npm run dev `
+# 프로젝트 사용법(Getting Started)  
+이어지는 설치안내에 따라 패키지를 먼저 설치한 뒤 아래 커맨드를 입력합니다.  
 
-**프론트엔드 구동**
-/WEB(FE) 디렉터리에서  
-`npm run serve`
+**백엔드 구동**  
+/WEB(BE) 디렉터리에서 ` npm run dev `
+
+**프론트엔드 구동**  
+/WEB(FE) 디렉터리에서 ` npm run serve `
 
 
 # 📖설치 안내(Installation Process)
@@ -100,17 +96,17 @@ npm install axios --save
 # ✏기술 스택(Technique Used)
 
 ### Infra
-|<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">|<img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">|<img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">|
-|:---:|:---:|:---:|
+|<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">|<img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">|
+|:---:|:---:|
 
 
 ### Front-End
-|<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">|<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">|<img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">|<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">|<img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">|
-|:---:|:---:|:---:|:---:|:---:|
+|<img src="https://img.shields.io/badge/vue-3FB27F?style=for-the-badge&logo=vue.js&logoColor=white">|<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">|<img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">|<img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">|
+|:---:|:---:|:---:|:---:|
 
 
 ### Back-End
-|<img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">|<img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">|<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">|
+|<img src="https://img.shields.io/badge/sqlite-4479A1?style=for-the-badge&logo=sqlite&logoColor=white">|<img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">|<img src="https://img.shields.io/badge/express-F8F8F8?style=for-the-badge&logo=express&logoColor=black">|
 |:---:|:---:|:---:|
 
 
