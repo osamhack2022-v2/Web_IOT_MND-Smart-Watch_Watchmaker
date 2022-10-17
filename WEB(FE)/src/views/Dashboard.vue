@@ -6,7 +6,7 @@
           <div class="col-lg-3 col-md-6 col-12">
             <card
               :title="stats.user.title"
-              :value="stats.user.value"
+              :value="users.length"
               :percentage="stats.user.percentage"
               :iconClass="stats.user.iconClass"
               :iconBackground="stats.user.iconBackground"
@@ -40,7 +40,7 @@
           <div class="col-lg-3 col-md-6 col-12">
             <card
               :title="stats.sales.title"
-              :value="stats.sales.value"
+              :value="users.filter(user => user.working =='근무On').length"
               :percentage="stats.sales.percentage"
               :iconClass="stats.sales.iconClass"
               :iconBackground="stats.sales.iconBackground"
@@ -75,15 +75,23 @@ import US from "@/assets/img/icons/flags/US.png";
 import DE from "@/assets/img/icons/flags/DE.png";
 import GB from "@/assets/img/icons/flags/GB.png";
 import BR from "@/assets/img/icons/flags/BR.png";
-
+import axios from "axios";
 export default {
   name: "dashboard-default",
+  created () {    
+    axios.get('/api/users') 
+        .then((response) => {
+          this.users = response.data
+
+        })
+  }
+  ,
   data() {
     return {
       stats: {
         user: {
           title: "부대 총 인원",
-          value: "+119",
+          value: "141",
           percentage: "",
           iconClass: "ni ni-users",
           detail: "",
@@ -108,13 +116,14 @@ export default {
         },
         sales: {
           title: "근무",
-          value: "+48",
+          value: 0,
           percentage: "",
           iconClass: "ni ni-cart",
           iconBackground: "bg-gradient-warning",
           detail: "",
         },
       },
+
       sales: {
         us: {
           country: "United States",
@@ -145,6 +154,7 @@ export default {
           flag: BR,
         },
       },
+      users:{},
     };
   },
   components: {
@@ -153,4 +163,6 @@ export default {
     CategoriesCard,
   },
 };
+
+
 </script>
