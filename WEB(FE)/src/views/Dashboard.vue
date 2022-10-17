@@ -16,35 +16,35 @@
           </div>
           <div class="col-lg-3 col-md-6 col-12">
             <card
-              :title="stats.users.title"
-              :value="stats.users.value"
-              :percentage="stats.users.percentage"
-              :iconClass="stats.users.iconClass"
-              :iconBackground="stats.users.iconBackground"
-              :detail="stats.users.detail"
+              :title="stats.vacation.title"
+              :value="users.filter(user => user.location =='휴가').length"
+              :percentage="stats.vacation.percentage"
+              :iconClass="stats.vacation.iconClass"
+              :iconBackground="stats.vacation.iconBackground"
+              :detail="stats.vacation.detail"
               directionReverse
             ></card>
           </div>
           <div class="col-lg-3 col-md-6 col-12">
             <card
-              :title="stats.clients.title"
-              :value="stats.clients.value"
-              :percentage="stats.clients.percentage"
-              :iconClass="stats.clients.iconClass"
-              :iconBackground="stats.clients.iconBackground"
-              :percentageColor="stats.clients.percentageColor"
-              :detail="stats.clients.detail"
+              :title="stats.out.title"
+              :value="users.filter(user => user.location =='외출').length"
+              :percentage="stats.out.percentage"
+              :iconClass="stats.out.iconClass"
+              :iconBackground="stats.out.iconBackground"
+              :percentageColor="stats.out.percentageColor"
+              :detail="stats.out.detail"
               directionReverse
             ></card>
           </div>
           <div class="col-lg-3 col-md-6 col-12">
             <card
-              :title="stats.sales.title"
+              :title="stats.working.title"
               :value="users.filter(user => user.working =='근무On').length"
-              :percentage="stats.sales.percentage"
-              :iconClass="stats.sales.iconClass"
-              :iconBackground="stats.sales.iconBackground"
-              :detail="stats.sales.detail"
+              :percentage="stats.working.percentage"
+              :iconClass="stats.working.iconClass"
+              :iconBackground="stats.working.iconBackground"
+              :detail="stats.working.detail"
               directionReverse
             ></card>
           </div>
@@ -97,24 +97,24 @@ export default {
           detail: "",
           iconBackground: "bg-gradient-primary",
         },
-        users: {
+        vacation: {
           title: "휴가",
-          value: "+17",
+          value: "17",
           percentage: "",
           iconClass: "ni ni-world",
           iconBackground: "bg-gradient-danger",
           detail: "",
         },
-        clients: {
+        out: {
           title: "외출",
-          value: "+6",
+          value: "6",
           percentage: "",
           iconClass: "ni ni-paper-diploma",
           percentageColor: "text-danger",
           iconBackground: "bg-gradient-success",
           detail: "",
         },
-        sales: {
+        working: {
           title: "근무",
           value: 0,
           percentage: "",

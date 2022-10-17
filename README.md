@@ -71,40 +71,31 @@ https://nodejs.org/en/
 npm install -g n
 n lts
 ```
-<!-- 
-**express 설치**  
 
-이거 안해도 돌아가는데요..?
-/WEB(BE) 디렉터리에서  
+**/WEB(BE) 디렉터리에서 nodejs 패키지 설치**  
+
 ```
-npm install -g express-generator
-express --view=pug WEB(BE)
 npm install
 ```
--->
-**nodemon 설치**  
-/WEB(BE) 디렉터리에서  
-```
-npm install -g nodemon --save-dev
-```
-
-**sqlite 설치**  
-/WEB(BE) 디렉터리에서  
-```
+<!--
+npm install -g express-generator
 npm install sqlite3
-```
+npm install -g nodemon --save-dev
+-->
 
-**vue.js 설치**  
-/WEB(FE) 디렉터리에서
+**/WEB(FE) 디렉터리에서 nodejs 패키지 설치**  
+
 ```
+npm install 
+```
+<!--
 npm i @vue/cli-service 
 npm i @vue/cli-plugin-babel 
 npm i @vue/cli-plugin-eslint 
 npm install -g sass-migrator
 npm install vue-router --save
 npm install axios --save
-npm install vuex
-```
+-->
 
 # ✏기술 스택(Technique Used)
 
