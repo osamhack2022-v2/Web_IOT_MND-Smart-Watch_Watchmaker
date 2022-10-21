@@ -1,3 +1,4 @@
+<!-- 검색 했을때 유저정보 팝업으로 쓰기 좋음 -->
 <template>
   <div class="card card-profile">
     <img src="../../assets/img/bg-profile.jpg" alt="Image placeholder" class="card-img-top" />

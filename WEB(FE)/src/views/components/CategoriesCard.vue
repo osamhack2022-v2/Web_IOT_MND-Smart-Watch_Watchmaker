@@ -121,7 +121,7 @@ export default {
   props: {
     cardTitle: {
       type: String,
-      default: "Categories",
+      default: "총 인원 세부사항",
     },
     title: {
       type: String,

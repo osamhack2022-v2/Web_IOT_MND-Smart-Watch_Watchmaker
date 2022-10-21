@@ -1,5 +1,5 @@
 <template>
-  <!-- Navbar -->
+  <!-- Navbar 삭제 확인 필요-->
   <nav
     class="navbar navbar-expand-lg top-0 z-index-3 position-absolute mt-4"
     :class="isBlur ? isBlur : 'shadow-none my-2 navbar-transparent w-100'"

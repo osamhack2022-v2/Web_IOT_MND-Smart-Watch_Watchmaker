@@ -51,11 +51,7 @@
         </div>
         <div class="row mt-4">
           <div class="col-lg-3">
-            <card
-              :title="stats.user_detail.title"
-
-              directionReverse
-            ></card>
+            <categories-card />
           </div>
           <div class="col-md-3">
             <categories-card />
@@ -74,7 +70,7 @@
 </template>
 <script>
 import Card from "@/examples/Cards/Card.vue";
-//import CategoriesCard from "./components/CategoriesCard.vue";
+import CategoriesCard from "./components/CategoriesCard.vue";
 
 import axios from "axios";
 export default {
@@ -125,7 +121,7 @@ export default {
         },
         user_detail: {
           title: "총 인원 세부사항",
-
+          detail: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
         },
         vacation_detail: {
 
@@ -142,7 +138,8 @@ export default {
     };
   },
   components: {
-    Card
+    Card,
+    CategoriesCard
   },
 };
 
