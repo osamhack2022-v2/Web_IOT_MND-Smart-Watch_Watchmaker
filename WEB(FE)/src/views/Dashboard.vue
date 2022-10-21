@@ -1,9 +1,9 @@
 <template>
-  <div class="py-4 container-fluid">
+  <div class="py-4 container-fluid h-75">
     <div class="row">
       <div class="col-lg-12">
         <div class="row">
-          <div class="col-lg-3 col-md-6 col-12">
+          <div class="col-lg-3">
             <card
               :title="stats.user.title"
               :value="users.length"
@@ -14,7 +14,7 @@
               directionReverse
             ></card>
           </div>
-          <div class="col-lg-3 col-md-6 col-12">
+          <div class="col-lg-3">
             <card
               :title="stats.vacation.title"
               :value="users.filter(user => user.location =='휴가').length"
@@ -25,7 +25,7 @@
               directionReverse
             ></card>
           </div>
-          <div class="col-lg-3 col-md-6 col-12">
+          <div class="col-lg-3">
             <card
               :title="stats.out.title"
               :value="users.filter(user => user.location =='외출').length"
@@ -37,7 +37,7 @@
               directionReverse
             ></card>
           </div>
-          <div class="col-lg-3 col-md-6 col-12">
+          <div class="col-lg-3">
             <card
               :title="stats.working.title"
               :value="users.filter(user => user.working =='근무On').length"
@@ -49,32 +49,33 @@
             ></card>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-12 mb-lg">
-            <!-- line chart -->
-            <div class="card z-index-2">
-              <gradient-line-chart />
-            </div>
-          </div>
-        </div>
         <div class="row mt-4">
-          <div class="col-lg-5">
+          <div class="col-lg-3">
+            <card
+              :title="stats.user_detail.title"
+
+              directionReverse
+            ></card>
+          </div>
+          <div class="col-md-3">
+            <categories-card />
+          </div>
+          <div class="col-md-3">
+            <categories-card />
+          </div>
+          <div class="col-md-3">
             <categories-card />
           </div>
         </div>
       </div>
     </div>
   </div>
+
 </template>
 <script>
 import Card from "@/examples/Cards/Card.vue";
-import GradientLineChart from "@/examples/Charts/GradientLineChart.vue";
-import CategoriesCard from "./components/CategoriesCard.vue";
+//import CategoriesCard from "./components/CategoriesCard.vue";
 
-import US from "@/assets/img/icons/flags/US.png";
-import DE from "@/assets/img/icons/flags/DE.png";
-import GB from "@/assets/img/icons/flags/GB.png";
-import BR from "@/assets/img/icons/flags/BR.png";
 import axios from "axios";
 export default {
   name: "dashboard-default",
@@ -90,7 +91,7 @@ export default {
     return {
       stats: {
         user: {
-          title: "부대 총 인원",
+          title: "총 인원",
           value: "141",
           percentage: "",
           iconClass: "ni ni-users",
@@ -122,45 +123,26 @@ export default {
           iconBackground: "bg-gradient-warning",
           detail: "",
         },
+        user_detail: {
+          title: "총 인원 세부사항",
+
+        },
+        vacation_detail: {
+
+        },
+        out_detail: {
+
+        },
+        working_detail: {
+
+        }
       },
 
-      sales: {
-        us: {
-          country: "United States",
-          sales: 2500,
-          value: "$230,900",
-          bounce: "29.9%",
-          flag: US,
-        },
-        germany: {
-          country: "Germany",
-          sales: "3.900",
-          value: "$440,000",
-          bounce: "40.22%",
-          flag: DE,
-        },
-        britain: {
-          country: "Great Britain",
-          sales: "1.400",
-          value: "$190,700",
-          bounce: "23.44%",
-          flag: GB,
-        },
-        brasil: {
-          country: "Brasil",
-          sales: "562",
-          value: "$143,960",
-          bounce: "32.14%",
-          flag: BR,
-        },
-      },
       users:{},
     };
   },
   components: {
-    Card,
-    GradientLineChart,
-    CategoriesCard,
+    Card
   },
 };
 

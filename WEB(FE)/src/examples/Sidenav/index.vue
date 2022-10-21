@@ -38,7 +38,7 @@
           alt="main_logo"
         />
       -->
-        <span class="ms-2 font-weight-bold me-2">MSW Admin</span>
+        <span class="ms-4.1 font-weight-bold me-4"><h5>MND Smart Watch</h5></span>
       </router-link>
     </div>
     <hr class="mt-0 horizontal dark" />

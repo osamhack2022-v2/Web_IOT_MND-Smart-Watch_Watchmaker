@@ -42,16 +42,17 @@ RFID/NFC 리더기(보드, RFID,NFC 리더)
 
 
 # 컴퓨터 구성 / 필수 조건 안내(Prerequisites)
-## Server
-| <img src="https://user-images.githubusercontent.com/71062855/197093088-35197723-a3ee-4f42-b4b2-390cfbbba466.png" alt="vue" width="16px" height="16px" /> Vue | <img src="https://user-images.githubusercontent.com/71062855/197093590-5aea074d-8fe6-4106-a0f9-9a14f653aa4d.png" alt="nodejs" width="16px" height="16px" /> Node.js | <img src="https://user-images.githubusercontent.com/71062855/197093406-c0701c00-d809-4168-b0ff-1b67b5fd6b0e.png" alt="express" width="16px" height="16px" /> Express | <img src="https://user-images.githubusercontent.com/71062855/197093394-95860fc4-982e-461b-b4c9-28bc2d6ba299.png" alt="sqlite" width="16px" height="16px" /> SQLite |
-| :---: | :---: | :---: | :---: |
-| 3.0.0+ | 18.9.1+ | 5+ | 3.19.3+ |
-
-
 ## Browser
 | <img src="https://user-images.githubusercontent.com/55467050/137036906-a6c0f879-5b51-49d3-8e02-d01994f64d18.png" alt="Chrome" width="16px" height="16px" /> Chrome | <img src="https://user-images.githubusercontent.com/55467050/137036913-033a988f-b9c9-4980-8540-5994cfa7e465.jpg" alt="Edge" width="16px" height="16px" /> Edge | <img src="https://user-images.githubusercontent.com/55467050/137036914-1a1f080e-9fb3-4b29-a143-517be979e78f.png" alt="Safari" width="16px" height="16px" /> Safari | <img src="https://user-images.githubusercontent.com/55467050/137036916-91328771-5dd5-41fb-a842-8562db3c480c.png" alt="Firefox" width="16px" height="16px" /> Firefox | <img src="https://user-images.githubusercontent.com/55467050/137036911-ccb70714-15fc-46fb-a074-19bb769727e9.png" alt="IE" width="16px" height="16px" /> Internet Explorer |
 | :---: | :---: | :---: | :---: | :---: |
 | Yes | Yes | Yes | Yes | 11+ |
+
+
+
+## Server
+| <img src="https://user-images.githubusercontent.com/71062855/197093088-35197723-a3ee-4f42-b4b2-390cfbbba466.png" alt="vue" width="16px" height="16px" /> Vue | <img src="https://user-images.githubusercontent.com/71062855/197093590-5aea074d-8fe6-4106-a0f9-9a14f653aa4d.png" alt="nodejs" width="16px" height="16px" /> Node.js | <img src="https://user-images.githubusercontent.com/71062855/197093406-c0701c00-d809-4168-b0ff-1b67b5fd6b0e.png" alt="express" width="16px" height="16px" /> Express | <img src="https://user-images.githubusercontent.com/71062855/197093394-95860fc4-982e-461b-b4c9-28bc2d6ba299.png" alt="sqlite" width="16px" height="16px" /> SQLite |
+| :---: | :---: | :---: | :---: |
+| 3.0.0+ | 18.9.1+ | 5+ | 3.19.3+ |
 
 # 🔗시스템 구성도
 ![system](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/58843f95-68af-40dd-8f5c-984fd4a9673d/a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221021%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221021T014448Z&X-Amz-Expires=86400&X-Amz-Signature=a30711641c0c065c705441d559d5f676eb6003f6435cd51c1f8d45901a88368f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22a.png%22&x-id=GetObject)

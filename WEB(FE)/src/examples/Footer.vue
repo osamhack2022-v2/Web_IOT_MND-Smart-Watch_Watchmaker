@@ -15,7 +15,7 @@
               href="https://github.com/osamhack2022/Web_Iot_Cloud_MND-Smart-Watch_Watchmaker/tree/main"
               class="font-weight-bold"
               target="_blank"
-              >Creative Tim With MSW</a>
+              >MSW</a>
           </div>
         </div>
       </div>
