@@ -2,7 +2,7 @@
   <div class="py-4 container-fluid">
     <div class=" row">
       <div class="col-12">
-        <authors-table />
+        <user-edit />
       </div>
     </div>
     <div class="mt-4 row">
@@ -14,13 +14,12 @@
 </template>
 
 <script>
-import AuthorsTable from "./components/AuthorsTable.vue";
+import UserEdit from "./components/UserEdit.vue";
 
 export default {
   name: "tables",
   components: {
-    AuthorsTable,
-
+    UserEdit,
   },
   data() {
     return {

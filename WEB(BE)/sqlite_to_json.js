@@ -26,9 +26,10 @@ db.serialize(() => {
       throw err;
     }
     
-    rows.forEach((row)=>{
+    rows.forEach((row,index)=>{
       //console.log(row); 
-      content+= ("{\n\"name\": \""+row.name+
+      content+= ("{ \n\"index\": \""+index+
+                "\",\n\"name\":\""+row.name+
                 "\",\n\"belong\":\""+row.belong+
                 "\",\n\"rank\":\""+row.rank+
                 "\",\n\"number\":\""+row.number+

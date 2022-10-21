@@ -6,6 +6,7 @@ import Notice from "../views/Notice.vue";
 import Profile from "../views/Profile.vue";
 import Signup from "../views/Signup.vue";
 import Signin from "../views/Signin.vue";
+import TableEdit from "../views/TableEdit.vue";
 
 const routes = [
   {
@@ -22,6 +23,11 @@ const routes = [
     path: "/tables",
     name: "Tables",
     component: Tables,
+  },
+  {
+    path: "/tables/:id",
+    name: "TableEdit",
+    component: TableEdit,
   },
   {
     path: "/notice",

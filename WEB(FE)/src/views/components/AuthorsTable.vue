@@ -62,6 +62,7 @@
                   class="text-secondary font-weight-bold text-xs"
                   data-toggle="tooltip"
                   data-original-title="Edit user"
+                  @click = "edit(user.index)" 
                 >관리</a>
               </td>
             </tr>
@@ -91,6 +92,19 @@ export default {
       users: {}
     }
   },
+  methods:{
+    edit(number){
+    this.$router.push({
+      name: "TableEdit",
+      params: {
+        id: number
+      },
+
+    })
+    console.log(this.users[number].name)
+  }
+  }
+
 
   
 };

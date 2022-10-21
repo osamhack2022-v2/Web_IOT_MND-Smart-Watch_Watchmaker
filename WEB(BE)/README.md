@@ -30,4 +30,20 @@ npm i @vue/cli-plugin-babel
 npm i @vue/cli-plugin-eslint
 npm install -g sass-migrator
 
+앞으로 할일
+
+
+- (가상의)Iot와 상호작용 구현
+- Iot 회로도 구성하기
+
+- 전달/특이사항
+- 심박수 포함 화면구성
+- 유저 추가/편집
+- 검색 기능
+- 로그 쌓기(출입기록만)
+
+- 필요없는 화면구성 제거하기
+
+- 문서 작업
+- 영상 제작
 
