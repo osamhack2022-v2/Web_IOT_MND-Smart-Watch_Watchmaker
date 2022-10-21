@@ -16,6 +16,8 @@ router.get('/', function(req, res, next) {
   
   console.log("sended to front");
 });
-//Insert Into Users(name,belong,rank,number,working,location,heartrate) Values ("서지혁", "통신중대","일병","22-70012345","근무Off","휴가",0 );
+//Insert Into Users(name,belong,rank,number,working,location,heartrate) Values ("서지혁", "체계대대 통신중대 3조","일병","22-70012345","근무Off","복지시설",0 );
+//Insert Into Users(name,belong,rank,number,working,location,heartrate) Values ("서지혁", "체계대대 통신중대 2조","병장","21-70012333","근무On","AAOC",0 );
+//Insert Into Users(name,belong,rank,number,working,location,heartrate) Values ("박원", "체계대대 운영중대 3조","일병","22-70000000","근무On","AAOC",0 );
 
 module.exports = router;

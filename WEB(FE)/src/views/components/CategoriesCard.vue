@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" style="height:100%;" >
     <div class="p-3 pb-0 card-header">
       <h6 class="mb-0">{{ cardTitle }}</h6>
     </div>
@@ -19,7 +19,7 @@
             <div class="d-flex flex-column">
               <h6 class="mb-1 text-sm text-dark">{{ user.name }}</h6>
               <span class="text-xs">
-                {{ user.number }}
+                {{ cardTitle }}
               </span>
             </div>
           </div>
@@ -40,11 +40,11 @@
 export default {
   props: {
     userDataFromDashboard: Object,
+    cardTitle: String,
   },
   created () {    
 
-  }
-  ,
+  },
 
   data(){
     return{
