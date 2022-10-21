@@ -1,11 +1,12 @@
-![MSW](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/91794090-3af4-44e4-a987-7aab365e0ac6/2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220921%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220921T010242Z&X-Amz-Expires=86400&X-Amz-Signature=7b9fc0afeec9a5faa3a3e31da74b0d616c34abe85ce2b68b09a288e41dbad17f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%222.png%22&x-id=GetObject)
+![MSW](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/91794090-3af4-44e4-a987-7aab365e0ac6/2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221021%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221021T002915Z&X-Amz-Expires=86400&X-Amz-Signature=4f969023bcb0361ea3f9fa789ac91b43b15d150568098d829780c8407d7d0072&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%222.png%22&x-id=GetObject)
 
 # ❤MSW 프로젝트 소개
 
 **국군 장병들의 신속한 상황 파악을 위한 스마트워치와 이를 활용한 부대 인원 관리 웹 플랫폼**
+- 심박/산소포화도를 활용하여 실시간 병력 관리
 - 부대별 생활관 인원 현황 확인의 어려움을 극복
 - 각 시설 이용/출입시 출입비콘의 활용
-- 스마트워치로 각종 데이터 수신 및 송신하여 사용자는 편의 제공을 관리자는 웹으로 쉽게 인원 확인/관리 할 수 있음
+- 스마트워치로 각종 데이터 수신 및 송신하여 사용자는 편의 제공을 관리자는 웹으로 쉽게 인원 확인/관리
 
 
 
@@ -25,18 +26,18 @@
 
 
 ### Iot(아두이노)
-스마트워치 하드웨어 구성(심박수, NFC, 디스플레이, 배터리, 보드 등) → 최대한 스마트워치 디자인  
-RFID/NFC 리더기(보드, RFID,NFC 리더) → 가능하다면 공군에서 사용하는 리더기처럼 디자인
-
-- **출입리더기**
-1. RFID/NFC 리더 후 웹플랫폼 데이터 전달
-2. 디스플레이(생략가능)
+스마트워치 하드웨어 구성(심박수, NFC, 디스플레이, 배터리, 보드 등)
+RFID/NFC 리더기(보드, RFID,NFC 리더)
 
 - **스마트워치**
 1. 시계 기능
 2. 심박수 및 혈중산소포화도 측정 및 실시간 전송
 3. NFC/RFID 
 4. 특이사항보고
+
+- **출입리더기**
+1. RFID/NFC 리더 후 웹플랫폼 데이터 전달
+2. 디스플레이(생략가능)
 
 
 
@@ -95,11 +96,6 @@ npm install axios --save
 
 # ✏기술 스택(Technique Used)
 
-### Infra
-|<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">|<img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">|
-|:---:|:---:|
-
-
 ### Front-End
 |<img src="https://img.shields.io/badge/vue-3FB27F?style=for-the-badge&logo=vue.js&logoColor=white">|<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">|<img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">|<img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">|
 |:---:|:---:|:---:|:---:|
@@ -113,6 +109,11 @@ npm install axios --save
 ### IoT
 |<img src="https://img.shields.io/badge/arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white">|
 |:---:|
+
+
+### Infra
+|<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">|<img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">|
+|:---:|:---:|
 
 
 
