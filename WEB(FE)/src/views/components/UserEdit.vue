@@ -6,16 +6,8 @@
           <div class="card">
             <div class="card-header pb-0">
               <div class="d-flex align-items-center">
-                <div class="col-md-9">
+                <div class="col-md-6">
                 Edit Profile
-                </div>
-                <div class="col-md-2">
-                <argon-button color="fail" size="sm" class="ms-auto" @click = "cancel()"
-                  >취소</argon-button>
-                </div>
-                <div class="col-md-2">
-                <argon-button color="success" size="sm" class="ms-auto" @click = "apply()"
-                  >확인</argon-button>
                 </div>
               </div>
             </div>
@@ -27,6 +19,7 @@
                   <label for="example-text-input" class="form-control-label"
                     >계급</label
                   >
+                  <!--
                   <div>
                     <select v-model="selected">
                         <option selected> 병장 </option>
@@ -35,6 +28,8 @@
                         <option> 이병 </option>
                     </select>
                   </div>
+                  -->
+                  <argon-input type="text" v-bind:value="user.rank" />
                 </div>
 
                 <div class="col-md-4">
@@ -54,7 +49,7 @@
               <hr class="horizontal dark" />
               <p class="text-uppercase text-sm">현재상태 정보</p>
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <label for="example-text-input" class="form-control-label"
                     >현위치</label
                   >
@@ -65,36 +60,35 @@
                 </div>
 
 
-                <div class="col-md-4">
+                <div class="col-md-1">
                   <label for="example-text-input" class="form-control-label"
-                    >근무상태</label
+                    >근무</label
                   >
                   <argon-switch />
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-1">
                   <label for="example-text-input" class="form-control-label"
-                    >City</label
+                    >휴가</label
                   >
-                  <argon-input type="text" value="New York" />
+                  <argon-switch />
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-1">
                   <label for="example-text-input" class="form-control-label"
-                    >Country</label
+                    >외출</label
                   >
-                  <argon-input type="text" value="United States" />
+                  <argon-switch />
                 </div>
+
               </div>
-              <hr class="horizontal dark" />
-              <p class="text-uppercase text-sm">About me</p>
               <div class="row">
-                <div class="col-md-12">
-                  <label for="example-text-input" class="form-control-label"
-                    >About me</label
-                  >
-                  <argon-input
-                    type="text"
-                    value="A beautiful Dashboard for Bootstrap 5. It is Free and Open Source."
-                  />
+                <div class="col-md-6"></div>
+                <div class="col-md-3">
+                <argon-button color="fail" size="sm" class="ms-auto" @click = "cancel()"
+                  >취소</argon-button>
+                </div>
+                <div class="col-md-3">
+                <argon-button color="success" size="sm" class="ms-auto" d="" align="right" @click = "apply()" 
+                  >확인</argon-button>
                 </div>
               </div>
             </div>

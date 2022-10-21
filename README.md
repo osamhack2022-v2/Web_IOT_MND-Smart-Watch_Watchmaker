@@ -132,5 +132,6 @@ npm install axios --save
 
 
 
+
 # 📜저작권 및 사용권 정보(Copyleft / End User License)
 - [MIT LICENSE](https://github.com/osamhack2022/Web_Iot_Cloud_MND-Smart-Watch_Watchmaker/blob/main/License)
