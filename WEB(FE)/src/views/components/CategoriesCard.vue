@@ -5,7 +5,7 @@
     </div>
     <div class="p-3 card-body">
       <ul class="list-group" :class="this.$store.state.isRTL ? 'pe-0' : ''">
-        <li v-for="user in users" v-bind:key="user.index"
+        <li v-for="user in userDataFromDashboard" v-bind:key="user.index"
           class="mb-2 border-0 list-group-item d-flex justify-content-between border-radius-lg"
           :class="this.$store.state.isRTL ? 'pe-0' : 'ps-0'"
         >
@@ -36,17 +36,16 @@
   </div>
 </template>
 <script>
-import axios from "axios";
+
 export default {
-
+  props: {
+    userDataFromDashboard: Object,
+  },
   created () {    
-    axios.get('/api/users') 
-        .then((response) => {
-          this.users = response.data
 
-        })
   }
   ,
+
   data(){
     return{
       users: {}

@@ -51,16 +51,16 @@
         </div>
         <div class="row mt-4">
           <div class="col-md-3">
-            <categories-card />
+            <categories-card v-bind:userDataFromDashboard="users" />
           </div>
           <div class="col-md-3">
-            <categories-card />    
+            <categories-card v-bind:userDataFromDashboard="users"/>    
           </div>
           <div class="col-md-3">
-            <categories-card />
+            <categories-card v-bind:userDataFromDashboard="users"/>
           </div>
           <div class="col-md-3">
-            <categories-card />
+            <categories-card v-bind:userDataFromDashboard="users"/>
           </div>
         </div>
       </div>
@@ -79,7 +79,6 @@ export default {
     axios.get('/api/users') 
         .then((response) => {
           this.users = response.data
-
         })
   }
   ,
