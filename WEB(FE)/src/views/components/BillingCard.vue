@@ -1,3 +1,4 @@
+<!-- 전달/특이사항 카드 -->
 <template>
   <div class="card">
     <div class="card-header pb-0 px-3">

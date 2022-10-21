@@ -7,6 +7,7 @@ import Profile from "../views/Profile.vue";
 import Signup from "../views/Signup.vue";
 import Signin from "../views/Signin.vue";
 import TableEdit from "../views/TableEdit.vue";
+import User from "../views/User.vue";
 
 const routes = [
   {
@@ -49,7 +50,11 @@ const routes = [
     name: "Signup",
     component: Signup,
   },
-  
+  {
+    path: "/user",
+    name: "User",
+    component: User,
+  },
 ];
 
 const router = createRouter({

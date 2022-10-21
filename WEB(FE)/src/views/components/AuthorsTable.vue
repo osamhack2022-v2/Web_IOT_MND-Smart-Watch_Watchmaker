@@ -1,4 +1,4 @@
-<!-- 인원 관리 시스템의 병사 근무 현황 vue-->
+<!-- 인원 관리 시스템의 병사 근무 현황 -->
 <template>
   <div class="card">
     <div class="card-header pb-0">

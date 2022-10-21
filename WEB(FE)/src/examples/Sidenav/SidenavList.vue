@@ -9,7 +9,7 @@
         <sidenav-item
           url="/dashboard-default"
           :class="getRoute() === 'dashboard-default' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'لوحة القيادة' : '인원현황 요약'"
+          :navText="this.$store.state.isRTL ? '' : '인원현황 요약'"
         >
           <template v-slot:icon>
             <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
@@ -20,7 +20,7 @@
         <sidenav-item
           url="/tables"
           :class="getRoute() === 'tables' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'الجداول' : '전체 인원 보기'"
+          :navText="this.$store.state.isRTL ? '' : '전체 인원 보기'"
         >
           <template v-slot:icon>
             <i
@@ -33,14 +33,24 @@
         <sidenav-item
           url="/notice"
           :class="getRoute() === 'notice' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'الفواتیر' : '전달/특이사항'"
+          :navText="this.$store.state.isRTL ? '' : '전달/특이사항'"
         >
           <template v-slot:icon>
             <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
           </template>
         </sidenav-item>
       </li>
-      
+      <li class="nav-item">
+        <sidenav-item
+          url="/user"
+          :class="getRoute() === 'user' ? 'active' : ''"
+          :navText="this.$store.state.isRTL ? '' : '실시간 병력 확인'"
+        >
+          <template v-slot:icon>
+            <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
+          </template>
+        </sidenav-item>
+      </li>
     
       <li class="mt-3 nav-item">
         <h6
@@ -48,7 +58,7 @@
           class="text-xs ps-4 text-uppercase font-weight-bolder opacity-6"
           :class="this.$store.state.isRTL ? 'me-4' : 'ms-2'"
         >
-          صفحات المرافق
+          
         </h6>
         <h6
           v-else
@@ -62,7 +72,7 @@
         <sidenav-item
           url="/profile"
           :class="getRoute() === 'profile' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'حساب تعريفي' : '마이페이지'"
+          :navText="this.$store.state.isRTL ? '' : '마이페이지'"
         >
           <template v-slot:icon>
             <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
@@ -73,7 +83,7 @@
         <sidenav-item
           url="/signin"
           :class="getRoute() === 'signin' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'تسجيل الدخول' : '로그인'"
+          :navText="this.$store.state.isRTL ? '' : '로그인'"
         >
           <template v-slot:icon>
             <i class="ni ni-single-copy-04 text-danger text-sm opacity-10"></i>
@@ -84,7 +94,7 @@
         <sidenav-item
           url="/signup"
           :class="getRoute() === 'signup' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'اشتراك' : '회원가입'"
+          :navText="this.$store.state.isRTL ? '' : '회원가입'"
         >
           <template v-slot:icon>
             <i class="ni ni-collection text-info text-sm opacity-10"></i>
@@ -108,8 +118,8 @@ export default {
   },
   data() {
     return {
-      title: "Argon Dashboard 2",
-      controls: "dashboardsExamples",
+      title: "MND Smart Watch",
+      controls: "dashboards",
       isActive: "active"
     };
   },

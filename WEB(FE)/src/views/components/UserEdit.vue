@@ -1,3 +1,4 @@
+<!-- 병력 수동 관리 -->
 <template>
     <div class="py-4 container-fluid">
       <div class="row">

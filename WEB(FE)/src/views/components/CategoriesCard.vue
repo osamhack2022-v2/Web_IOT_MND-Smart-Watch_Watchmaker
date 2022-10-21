@@ -38,8 +38,7 @@
 <script>
 import axios from "axios";
 export default {
-  name: "authors-table"
-  ,
+
   created () {    
     axios.get('/api/users') 
         .then((response) => {

@@ -121,7 +121,7 @@ export default {
         },
         user_detail: {
           title: "총 인원 세부사항",
-
+          detail: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
         },
         vacation_detail: {
 
