@@ -1,1 +1,2 @@
-
+### 아두이노 설계
+![MSW](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a4e2db86-eb09-4a9a-a62e-58c0573ec748/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221021%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221021T004151Z&X-Amz-Expires=86400&X-Amz-Signature=4f3507c8ecf860268680280d46dd782e002c7b53c36801fb978fa9d3a9fa9c8b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
