@@ -52,7 +52,7 @@ RFID/NFC 리더기(보드, RFID,NFC 리더)
 ## Server
 | <img src="https://user-images.githubusercontent.com/71062855/197093088-35197723-a3ee-4f42-b4b2-390cfbbba466.png" alt="vue" width="16px" height="16px" /> Vue | <img src="https://user-images.githubusercontent.com/71062855/197093590-5aea074d-8fe6-4106-a0f9-9a14f653aa4d.png" alt="nodejs" width="16px" height="16px" /> Node.js | <img src="https://user-images.githubusercontent.com/71062855/197093406-c0701c00-d809-4168-b0ff-1b67b5fd6b0e.png" alt="express" width="16px" height="16px" /> Express | <img src="https://user-images.githubusercontent.com/71062855/197093394-95860fc4-982e-461b-b4c9-28bc2d6ba299.png" alt="sqlite" width="16px" height="16px" /> SQLite |
 | :---: | :---: | :---: | :---: |
-| 3.0.0+ | 18.9.1+ | 5+ | 3.19.3+ |
+| 3.0.0+ | 16.18.0+ | 5+ | 3.19.3+ |
 
 # 🔗시스템 구성도
 ![system](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/58843f95-68af-40dd-8f5c-984fd4a9673d/a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221021%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221021T014448Z&X-Amz-Expires=86400&X-Amz-Signature=a30711641c0c065c705441d559d5f676eb6003f6435cd51c1f8d45901a88368f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22a.png%22&x-id=GetObject)
