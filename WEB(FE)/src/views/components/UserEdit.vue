@@ -7,10 +7,11 @@
             <div class="card-header pb-0">
               <div class="d-flex align-items-center">
                 <div class="col-md-6">
-                Edit Profile
+                <h4>Edit Profile</h4>
                 </div>
               </div>
             </div>
+
             <div class="card-body">
               <p class="text-uppercase text-sm">기본 정보</p>
               <div class="row">
@@ -29,22 +30,28 @@
                     </select>
                   </div>
                   -->
-                  <argon-input type="text" v-bind:value="user.rank" />
+                  <argon-input type="text" v-bind:value="user.rank" @input="changeRank" />
+                  
                 </div>
 
                 <div class="col-md-4">
                   <label for="example-text-input" class="form-control-label"
                     >이름</label
                   >
-                  <argon-input type="text" v-bind:value="user.name" />
+                  <argon-input type="text" v-bind:value="user.name" @input="changeName"/>
                 </div>
                 <div class="col-md-6">
                   <label for="example-text-input" class="form-control-label"
                     >군번</label
                   >
-                  <argon-input type="email" v-bind:value="user.number" />
+                  <argon-input type="email" v-bind:value="user.number" @input="changeNumber" />
                 </div>
-
+                <div class="col-md-12">
+                  <label for="example-text-input" class="form-control-label"
+                    >소속</label
+                  >
+                  <argon-input type="text" v-bind:value="user.belong" @input="changeBelong"/>
+                </div>
               </div>
               <hr class="horizontal dark" />
               <p class="text-uppercase text-sm">현재상태 정보</p>
@@ -56,6 +63,7 @@
                   <argon-input
                     type="text"
                     v-bind:value="user.location"
+                    @input="changeLocation"
                   />
                 </div>
 
@@ -64,19 +72,35 @@
                   <label for="example-text-input" class="form-control-label"
                     >근무</label
                   >
-                  <argon-switch />
+                <div v-if = "user.working == '근무On'"> 
+                  <argon-switch v-bind:v-model="newInfo.working" checked/>
+                </div>
+                <div v-else>
+                  <argon-switch v-bind:v-model="newInfo.working"/>
+                </div>
+                  
                 </div>
                 <div class="col-md-1">
                   <label for="example-text-input" class="form-control-label"
                     >휴가</label
                   >
-                  <argon-switch />
+                  <div v-if = "user.location == '휴가'"> 
+                    <argon-switch checked/>
+                  </div>
+                  <div v-else>
+                    <argon-switch />
+                  </div>
                 </div>
                 <div class="col-md-1">
                   <label for="example-text-input" class="form-control-label"
                     >외출</label
                   >
-                  <argon-switch />
+                  <div v-if = "user.location == '외출'"> 
+                    <argon-switch checked/>
+                  </div>
+                  <div v-else>
+                    <argon-switch/>
+                  </div>
                 </div>
 
               </div>
@@ -110,7 +134,7 @@ import ArgonSwitch from "@/components/ArgonSwitch.vue";
 
 export default {
     name: "user-edit",
-    components: { ArgonInput, ArgonButton, ArgonSwitch },
+    components: { ArgonInput, ArgonButton, ArgonSwitch, },
     created () {    
     axios.get('/api/users') 
         .then((response) => {
@@ -121,6 +145,15 @@ export default {
     data(){
       return {
         user : {},
+        newInfo : {
+          number: null,
+          name: null,
+          new_number: null,
+          rank: null,
+          belong: null,
+          location: null,
+          working: null
+        },
         rank:[
           {
             text:"병장"
@@ -140,13 +173,50 @@ export default {
 
     methods:{
       cancel(){
-        console.log(this.user.number)
+        //console.log(this.user.number)
         this.$router.back()
       },
+      changeName(e){
+        this.newInfo.name=e.target.value
+      },
+      changeBelong(e){
+        this.newInfo.belong=e.target.value
+      },
+      changeNumber(e){
+        this.newInfo.new_number=e.target.value
+      },
+      changeRank(e){
+        this.newInfo.rank=e.target.value
+      },
+
+      changeLocation(e){
+        this.newInfo.location=e.target.value
+      },
+      changeWorking(e){
+        this.newInfo.working=e.target.value
+        console.log(e.target.value)
+      }, 
 
       apply(){
         // 수정사항 반영
-        console.log(this.$route.params.id)
+        //console.log(this.$route.params.id)
+        this.newInfo.number=this.user.number
+        console.log(this.newInfo.number)
+        console.log(this.newInfo.name)
+        console.log(this.newInfo.belong)
+        console.log(this.newInfo.new_number)
+        console.log(this.newInfo.rank)
+        console.log(this.newInfo.location)
+        console.log(this.newInfo.working)
+        //axios.post
+
+        axios.post('/api/update', this.newInfo ).then((res)=>{
+                console.log(res);
+            }).catch(error=>{
+                console.log(error);
+                throw new Error(error);
+            });
+
         this.$router.back()
       }
 
@@ -154,3 +224,8 @@ export default {
 
 };
 </script>
+<!--
+
+  스위치(체크박스인풋)에서 값 받아오는데 문제 있음.
+
+-->

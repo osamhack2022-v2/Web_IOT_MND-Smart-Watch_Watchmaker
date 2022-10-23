@@ -42,8 +42,8 @@
       </li>
       <li class="nav-item">
         <sidenav-item
-          url="/user"
-          :class="getRoute() === 'user' ? 'active' : ''"
+          url="/combat-dashboard"
+          :class="getRoute() === 'combat-dashboard' ? 'active' : ''"
           :navText="this.$store.state.isRTL ? '' : '실시간 병력 확인'"
         >
           <template v-slot:icon>

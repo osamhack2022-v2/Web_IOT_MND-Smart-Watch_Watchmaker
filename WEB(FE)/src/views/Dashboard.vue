@@ -51,16 +51,28 @@
         </div>
         <div class="row mt-4">
           <div class="col-md-3">
-            <categories-card />
+          <row style="height:100%;">
+            <div class="row-md-3">
+            <categories-card v-bind:userDataFromDashboard="users.filter(user => user.location =='생활관')" cardTitle="생활관"/>
+            </div>
+            <div class="row-md-1"> <br> </div>
+            <div class="row-md-3">
+            <categories-card v-bind:userDataFromDashboard="users.filter(user => user.location =='복지시설')" cardTitle="복지시설"/>
+            </div>
+            <div class="row-md-3">
+            <div class="row-md-1"> <br> </div>
+            <categories-card v-bind:userDataFromDashboard="users.filter(user => user.location =='체력단련시설')" cardTitle="체력단련시설"/>
+            </div>
+          </row>
           </div>
           <div class="col-md-3">
-            <categories-card />    
+            <categories-card v-bind:userDataFromDashboard="users.filter(user => user.location =='휴가')" cardTitle="휴가"/>    
           </div>
           <div class="col-md-3">
-            <categories-card />
+            <categories-card v-bind:userDataFromDashboard="users.filter(user => user.location =='외출')" cardTitle="외출"/>
           </div>
           <div class="col-md-3">
-            <categories-card />
+            <categories-card v-bind:userDataFromDashboard="users.filter(user => user.working =='근무On')" cardTitle="근무"/>
           </div>
         </div>
       </div>
@@ -79,7 +91,6 @@ export default {
     axios.get('/api/users') 
         .then((response) => {
           this.users = response.data
-
         })
   }
   ,

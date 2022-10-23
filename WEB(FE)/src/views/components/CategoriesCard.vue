@@ -1,11 +1,11 @@
 <template>
-  <div class="card">
+  <div class="card" style="height:100%;" >
     <div class="p-3 pb-0 card-header">
       <h6 class="mb-0">{{ cardTitle }}</h6>
     </div>
     <div class="p-3 card-body">
       <ul class="list-group" :class="this.$store.state.isRTL ? 'pe-0' : ''">
-        <li v-for="user in users" v-bind:key="user.index"
+        <li v-for="user in userDataFromDashboard" v-bind:key="user.index"
           class="mb-2 border-0 list-group-item d-flex justify-content-between border-radius-lg"
           :class="this.$store.state.isRTL ? 'pe-0' : 'ps-0'"
         >
@@ -19,7 +19,7 @@
             <div class="d-flex flex-column">
               <h6 class="mb-1 text-sm text-dark">{{ user.name }}</h6>
               <span class="text-xs">
-                {{ user.number }}
+                {{ cardTitle }}
               </span>
             </div>
           </div>
@@ -36,17 +36,16 @@
   </div>
 </template>
 <script>
-import axios from "axios";
+
 export default {
-
+  props: {
+    userDataFromDashboard: Object,
+    cardTitle: String,
+  },
   created () {    
-    axios.get('/api/users') 
-        .then((response) => {
-          this.users = response.data
 
-        })
-  }
-  ,
+  },
+
   data(){
     return{
       users: {}
