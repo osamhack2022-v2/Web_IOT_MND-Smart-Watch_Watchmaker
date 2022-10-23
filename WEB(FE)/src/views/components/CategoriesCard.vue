@@ -14,7 +14,8 @@
               class="text-center shadow icon icon-shape icon-sm bg-gradient-dark"
               :class="this.$store.state.isRTL ? 'ms-3' : 'me-3'"
             >
-              <i class="ni ni-mobile-button text-white opacity-10"></i>
+
+              <i class="ni ni-circle-08 text-white opacity-10"></i>
             </div>
             <div class="d-flex flex-column">
               <h6 class="mb-1 text-sm text-dark">{{ user.name }}</h6>

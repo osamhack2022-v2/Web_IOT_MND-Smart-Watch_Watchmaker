@@ -188,7 +188,6 @@ export default {
       changeRank(e){
         this.newInfo.rank=e.target.value
       },
-
       changeLocation(e){
         this.newInfo.location=e.target.value
       },
@@ -201,15 +200,6 @@ export default {
         // 수정사항 반영
         //console.log(this.$route.params.id)
         this.newInfo.number=this.user.number
-        console.log(this.newInfo.number)
-        console.log(this.newInfo.name)
-        console.log(this.newInfo.belong)
-        console.log(this.newInfo.new_number)
-        console.log(this.newInfo.rank)
-        console.log(this.newInfo.location)
-        console.log(this.newInfo.working)
-        //axios.post
-
         axios.post('/api/update', this.newInfo ).then((res)=>{
                 console.log(res);
             }).catch(error=>{
@@ -221,7 +211,6 @@ export default {
       }
 
     }
-
 };
 </script>
 <!--
