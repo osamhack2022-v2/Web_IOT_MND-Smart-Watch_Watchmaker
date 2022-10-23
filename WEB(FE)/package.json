@@ -2,16 +2,16 @@
   "name": "WEB(FE)",
   "version": "0.0.0",
   "private": true,
-  "license": "SEE LICENSE IN <https://www.creative-tim.com/license>",
-  "description": "FrontEnd Web Server with Vue.js & Bootstrap.",
+  "license": "MSW MIT license",
+  "description": "FrontEnd Web Server with Vue.js & Bootstrap & Tim",
   "author": "Watchmaker",
-  "homepage": "https://demos.creative-tim.com/vue-argon-dashboard/",
+  "homepage": "https://github.com/osamhack2022-v2/Web_Iot_Cloud_MND-Smart-Watch_Watchmaker/",
   "bugs": {
-    "url": "https://github.com/creativetimofficial/vue-argon-dashboard/issues"
+    "url": "https://github.com/osamhack2022-v2/Web_Iot_Cloud_MND-Smart-Watch_Watchmaker/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/vue-argon-dashboard.git"
+    "url": "git+https://github.com/osamhack2022-v2/Web_Iot_Cloud_MND-Smart-Watch_Watchmaker.git"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
