@@ -1,5 +1,5 @@
 <template>
-  <!-- Navbar 삭제 확인 필요-->
+  <!-- 로그인/회원가입 Navbar -->
   <nav
     class="navbar navbar-expand-lg top-0 z-index-3 position-absolute mt-4"
     :class="isBlur ? isBlur : 'shadow-none my-2 navbar-transparent w-100'"
@@ -9,7 +9,7 @@
         class="navbar-brand font-weight-bolder ms-lg-0 ms-3"
         :class="darkMode ? 'text-black' : 'text-white'"
         to="/"
-        >Argon Dashboard 2</router-link
+        >MSW Smart Watch</router-link
       >
       <button
         class="shadow-none navbar-toggler ms-2"
@@ -39,7 +39,7 @@
                 aria-hidden="true"
                 :class="isBlur ? 'text-dark' : 'text-white'"
               ></i>
-              Dashboard
+              인원 현황 요약
             </router-link>
           </li>
           <li class="nav-item">
@@ -49,7 +49,7 @@
                 aria-hidden="true"
                 :class="isBlur ? 'text-dark' : 'text-white'"
               ></i>
-              Profile
+              마이프로필
             </router-link>
           </li>
           <li class="nav-item">
@@ -59,7 +59,7 @@
                 aria-hidden="true"
                 :class="isBlur ? 'text-dark' : 'text-white'"
               ></i>
-              Sign Up
+              회원가입
             </router-link>
           </li>
           <li class="nav-item">
@@ -69,18 +69,8 @@
                 aria-hidden="true"
                 :class="isBlur ? 'text-dark' : 'text-white'"
               ></i>
-              Sign In
+              로그인
             </router-link>
-          </li>
-        </ul>
-        <ul class="navbar-nav d-lg-block d-none">
-          <li class="nav-item">
-            <a
-              href="https://www.creative-tim.com/product/vue-argon-dashboard"
-              class="btn btn-sm mb-0 me-1"
-              :class="isBtn"
-              >Free download</a
-            >
           </li>
         </ul>
       </div>
