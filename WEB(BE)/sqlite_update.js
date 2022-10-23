@@ -1,6 +1,6 @@
 
 // require 했을때 users.json이 정상적으로 write 되지 않음
-module.exports.updateUserInfo = async function (number, name, belong, rank, new_number, working, location, heartrate){
+module.exports.updateUserInfo = async function (number, name, belong, rank, new_number, working, location, heartrate, tagID){
 
 var sqlite3 = require('sqlite3').verbose(); 
 const fs = require('fs');
@@ -19,8 +19,9 @@ let db = new sqlite3.Database(dbPath, sqlite3.OPEN_READWRITE, (err) => {
 
 
 const queries = [];
-const vars = [ ["name",name], ["belong",belong], ["rank",rank], ["number",new_number], ["working",working], ["location",location], ["heartrate",heartrate]];
-console.log("update operating. . . . .")
+const vars = [ ["name",name], ["belong",belong], ["rank",rank], ["number",new_number], 
+["working",working], ["location",location], ["heartrate",heartrate], ["tagID",tagID]];
+
 vars.forEach((value)=>{
 
   if(value[1]!=undefined){

@@ -46,11 +46,17 @@
                   >
                   <argon-input type="email" v-bind:value="user.number" @input="changeNumber" />
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <label for="example-text-input" class="form-control-label"
                     >소속</label
                   >
                   <argon-input type="text" v-bind:value="user.belong" @input="changeBelong"/>
+                </div>
+                <div class="col-md-6">
+                  <label for="example-text-input" class="form-control-label"
+                    >태그 ID</label
+                  >
+                  <argon-input type="text" v-bind:value="user.tagID" @input="changeTagID"/>
                 </div>
               </div>
               <hr class="horizontal dark" />
@@ -152,22 +158,9 @@ export default {
           rank: null,
           belong: null,
           location: null,
-          working: null
-        },
-        rank:[
-          {
-            text:"병장"
-          },
-          {
-            text:"상병"
-          },
-          {
-            text:"일병"
-          },
-          {
-            text:"이병"
-          }
-        ]
+          working: null,
+          tagID: null
+        }
       }
     },
 
@@ -191,6 +184,9 @@ export default {
       changeLocation(e){
         this.newInfo.location=e.target.value
       },
+      changeTagID(e){
+        this.newInfo.tagID=e.target.value
+      }, 
       changeWorking(e){
         this.newInfo.working=e.target.value
         console.log(e.target.value)
@@ -199,6 +195,8 @@ export default {
       apply(){
         // 수정사항 반영
         //console.log(this.$route.params.id)
+        console.log(this.user.tagID)
+        console.log(this.newInfo.tagID)
         this.newInfo.number=this.user.number
         axios.post('/api/update', this.newInfo ).then((res)=>{
                 console.log(res);

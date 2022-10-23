@@ -134,16 +134,16 @@
                     >패스워드 변경</label
                   >
                   <argon-input
-                    type="text"
-                    value="이전 비밀번호"
+                    type="password"
+                    placeholder="이전 비밀번호"
                   />
                   <argon-input
-                    type="text"
-                    value="변경할 비밀번호"
+                    type="password"
+                    placeholder="변경할 비밀번호"
                   />
                   <argon-input
-                    type="text"
-                    value="변경할 비밀번호 확인"
+                    type="password"
+                    placeholder="변경할 비밀번호 확인"
                   />
                 </div>
               </div>
