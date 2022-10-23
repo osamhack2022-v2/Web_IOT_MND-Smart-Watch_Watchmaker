@@ -22,6 +22,7 @@ router.get('/', function(req, res, next) {
     if(err){
       throw err;
     }
+    rows.forEach((row,index)=>{ row.index=index })
     res.send(rows); //send to Front by using express
   });
 
