@@ -200,7 +200,7 @@
 <script>
 import Breadcrumbs from "../Breadcrumbs.vue";
 import { mapMutations, mapActions } from "vuex";
-
+import axios from "axios";
 
 export default {
   name: "navbar",
@@ -223,7 +223,12 @@ export default {
       
     },
     apply(){
-      this.$router.back();
+       axios.get('/api/conbatInfo1', this.searchinfo ).then((res)=>{
+                console.log(res);
+            }).catch(error=>{
+                console.log(error);
+                throw new Error(error);
+            });
     }
   },
   components: {
