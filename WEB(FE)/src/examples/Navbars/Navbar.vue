@@ -22,15 +22,15 @@
         >
           <div class="input-group">
             <span class="input-group-text text-body">
+              
               <i class="fas fa-search" aria-hidden="true"></i>
             </span>
-            <input
+            <input @keyup.enter="apply()"
               type="text"
               class="form-control"
-              :placeholder="
-                this.$store.state.isRTL ? 'أكتب هنا...' : 'Type here...'
-              "
+
             />
+
           </div>
         </div>
         <ul class="navbar-nav justify-content-end">
@@ -201,6 +201,7 @@
 import Breadcrumbs from "../Breadcrumbs.vue";
 import { mapMutations, mapActions } from "vuex";
 
+
 export default {
   name: "navbar",
   data() {
@@ -219,6 +220,10 @@ export default {
     toggleSidebar() {
       this.toggleSidebarColor("bg-white");
       this.navbarMinimize();
+      
+    },
+    apply(){
+      this.$router.back();
     }
   },
   components: {
@@ -227,7 +232,7 @@ export default {
   computed: {
     currentRouteName() {
       return this.$route.name;
-    }
+    },
   }
 };
 </script>
