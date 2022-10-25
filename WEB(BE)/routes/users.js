@@ -18,11 +18,10 @@ router.get('/', function(req, res, next) {
           console.log('Connected to the UserDatabase.');
       }
   });
-
+  
   const getQuery = `SELECT name, belong, rank, number, working, location, tagID FROM Users ORDER BY number ASC`;
-  db.serialize(()=>{
-    
-    r=db.all(getQuery,[],(err, rows ) =>{
+db.serialize(()=>{
+  db.all(getQuery,[],(err, rows ) =>{
       if(err){
         throw err;
       }
@@ -31,9 +30,9 @@ router.get('/', function(req, res, next) {
       res.send(rows); //send to Front by using express
 
 
-    }); 
+  }); 
 
-  })
+})
 
 db.close((err) =>{
   if(err){

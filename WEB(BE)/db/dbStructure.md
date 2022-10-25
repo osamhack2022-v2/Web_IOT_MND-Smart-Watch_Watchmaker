@@ -51,12 +51,34 @@ spo2 산소포화도
 tagID RFID 태그 ID
 operation 작전중 여부
 
+Create table _방공관제사령부 (name varchar(20), leader varchar(20), leaderRank varchar(12), deputy varchar(20), deputyRank varchar(12));
+Insert Into _방공관제사령부 Values("32전대", "이재용", "대령", "이적","원사");
 
-Create table _운영중대 (platoon varchar(20), leader varchar(20), leaderRank varchar(12), deputy varchar(20), deputyRank varchar(12));
-Create table _체계대대 (company varchar(20), leader varchar(20), leaderRank varchar(12), deputy varchar(20), deputyRank varchar(12));
+Create table _32전대 (name varchar(20), leader varchar(20), leaderRank varchar(12), deputy varchar(20), deputyRank varchar(12));
+Insert Into _32전대 Values("체계대대", "박준형", "중령", "박효신","원사");
+Insert Into _32전대 Values("3통제대", "박정훈", "대령", "김범수","원사");
+
+
+Create table _체계대대 (name varchar(20), leader varchar(20), leaderRank varchar(12), deputy varchar(20), deputyRank varchar(12));
 Insert Into _체계대대 Values("운영중대", "박세현", "대위", "곽철용","원사");
 Insert Into _체계대대 Values("통신중대", "박정민", "대위", "임꺽정","준위");
 Insert Into _체계대대 Values("정비중대", "마태림", "대위", "홍길동","원사");
 Insert Into _체계대대 Values("운영통제실", "박준일", "대위(진)", "곽두팔","원사");
-Create table _3통제대 (company varchar(20), leader varchar(20), leaderRank varchar(12), deputy varchar(20), deputyRank varchar(12));
 
+Create table _3통제대 (name varchar(20), leader varchar(20), leaderRank varchar(12), deputy varchar(20), deputyRank varchar(12));
+Insert Into _3통제대 Values("식별반", "박기완", "대위", "윤종신", "상사");
+Insert Into _3통제대 Values("공중감시", "박세빈", "중위", "성시경", "원사");
+
+Create table _운영중대 (name varchar(20), leader varchar(20), leaderRank varchar(12), deputy varchar(20), deputyRank varchar(12));
+
+
+
+  var result = { battalion: null } 
+  info = getFromDB(dbPath, `SELECT * FROM _`+targetHead+` WHERE name ="`+target+`"` )
+  console.log(info)
+  
+  result.battalion= getFromDB(dbPath,`SELECT * FROM _`+target )
+  result.leader = info.leader;  result.leaderRank = info.leaderRank;
+  result.deputy = info.deputy;  result.deputyRank = info.deputyRank;
+
+  res.send(result)

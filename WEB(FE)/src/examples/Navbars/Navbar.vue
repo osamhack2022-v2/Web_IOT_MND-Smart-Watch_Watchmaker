@@ -223,8 +223,8 @@ export default {
       
     },
     apply(){
-       axios.get('/api/conbatInfo1', this.searchinfo ).then((res)=>{
-                console.log(res);
+       axios.get('/api/combatInfo1', this.searchinfo ).then((res)=>{
+                console.log(res.data);
             }).catch(error=>{
                 console.log(error);
                 throw new Error(error);
