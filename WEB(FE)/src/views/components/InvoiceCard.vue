@@ -3,7 +3,7 @@
     <div class="card-header pb-0 p-3">
       <div class="row">
         <div class="col-6 d-flex align-items-center">
-          <h6 class="mb-0">Invoices</h6>
+          <h6 class="mb-0">첨부 파일</h6>
         </div>
         <div class="col-6 text-end">
           <argon-button color="success" size="sm" variant="outline">View All</argon-button>
@@ -20,7 +20,6 @@
             <span class="text-xs">#MS-415646</span>
           </div>
           <div class="d-flex align-items-center text-sm">
-            $180
             <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4">
               <i class="fas fa-file-pdf text-lg me-1" aria-hidden="true"></i> PDF
             </button>
@@ -34,7 +33,6 @@
             <span class="text-xs">#RV-126749</span>
           </div>
           <div class="d-flex align-items-center text-sm">
-            $250
             <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4">
               <i class="fas fa-file-pdf text-lg me-1" aria-hidden="true"></i> PDF
             </button>
@@ -48,7 +46,6 @@
             <span class="text-xs">#FB-212562</span>
           </div>
           <div class="d-flex align-items-center text-sm">
-            $560
             <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4">
               <i class="fas fa-file-pdf text-lg me-1" aria-hidden="true"></i> PDF
             </button>
@@ -62,7 +59,6 @@
             <span class="text-xs">#QW-103578</span>
           </div>
           <div class="d-flex align-items-center text-sm">
-            $120
             <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4">
               <i class="fas fa-file-pdf text-lg me-1" aria-hidden="true"></i> PDF
             </button>
@@ -74,7 +70,6 @@
             <span class="text-xs">#AR-803481</span>
           </div>
           <div class="d-flex align-items-center text-sm">
-            $300
             <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4">
               <i class="fas fa-file-pdf text-lg me-1" aria-hidden="true"></i> PDF
             </button>
