@@ -30,6 +30,6 @@
 
 <script>
 export default {
-  name: "billing-card",
+  name: "output-card",
 };
 </script>
