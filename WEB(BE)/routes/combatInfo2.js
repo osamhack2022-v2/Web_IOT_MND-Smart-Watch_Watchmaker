@@ -1,5 +1,4 @@
 var express = require('express');
-const { get } = require('http');
 var router = express.Router();
 var sqlite3 = require('sqlite3').verbose(); 
 var list=[];
@@ -32,36 +31,20 @@ function getFromDB(dbPath,getQuery){
 }
 
 /* GET users listing. */
-router.get('/:keyword', function(req, res, next) {
-  
-  var key = req.params.keyword;
-  
+router.get('/', function(req, res, next) {
+
   const path = require('path'); 
   const dbPath = path.resolve(__dirname, './../db/UserDatabase.db');
-  const getQuery = `SELECT * FROM Users where name like "%`+key+`%" OR belong like "%`+key+`%" ORDER BY belong ASC, number ASC`;
-  //const getQuery = `SELECT * FROM Users where belong LIKE "%체계대대%" ORDER BY belong ASC, number ASC;`;
+  const getQuery = `SELECT name, belong, rank, number, working, location, tagID FROM Users ORDER BY number ASC`;
+  st = "공군 방공관제사령부 32전대".split()
+  console.log(st[length(st)-1])
+  target = "32전대"
 
-  let db = new sqlite3.Database(dbPath, sqlite3.OPEN_READWRITE, (err) => {
-    if (err) {
-        console.error(err.message);
-        console.error(dbPath);
-    } else {
-        console.log('Connected to the UserDatabase.');
-    }
-  });
+  var result = { battalion : []} 
+  result.battalion = getFromDB(dbPath,`SELECT * FROM _`+target+`;` )
 
-  db.all(getQuery,[],(err,rows) =>{
-    if(err){
-      throw err;
-    }
-    rows.forEach((row,index)=>{ row.index=index })
-    //console.log(rows)
-    res.send(rows)
-
-  });
-
-  db.close();
-
+  
+  res.send(result)
   console.log("sended to front");
 });
 
