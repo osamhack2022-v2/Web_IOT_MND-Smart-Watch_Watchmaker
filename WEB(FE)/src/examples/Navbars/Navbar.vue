@@ -28,7 +28,7 @@
             <input @keyup.enter="apply()"
               type="text"
               class="form-control"
-
+              v-model="keyword"
             />
 
           </div>
@@ -206,7 +206,9 @@ export default {
   name: "navbar",
   data() {
     return {
-      showMenu: false
+      showMenu: false,
+      keyword:'',
+
     };
   },
   props: ["minNav", "textWhite"],
@@ -223,7 +225,7 @@ export default {
       
     },
     apply(){
-       axios.get('/api/combatInfo1', this.searchinfo ).then((res)=>{
+       axios.get('/api/combatInfo1', {params:{ keyword:this.keyword}} ).then((res)=>{
                 console.log(res.data);
             }).catch(error=>{
                 console.log(error);
