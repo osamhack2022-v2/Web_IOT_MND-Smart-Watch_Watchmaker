@@ -6,7 +6,7 @@
       </div>
       <div class="card-body pt-4 p-3">
         <ul class="list-group">
-          <li class="mb-2 border-0 list-group-item d-flex justify-content-between border-radius-lg">
+          <li class="mb-2 border-0 list-group-item d-flex justify-content-start border-radius-lg">
             <div class="text-center shadow icon icon-shape icon-sm bg-gradient-dark">
               <i class="ni ni-circle-08 text-white opacity-10"></i>
             </div>
