@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var updateRouter = require('./routes/update');
 var combat1Router = require('./routes/combatInfo1');
+var combatBelongRouter = require('./routes/combatBelong');
 
 var app = express();
 
@@ -26,6 +27,7 @@ app.use('/api', indexRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/update', updateRouter);
 app.use('/api/combatInfo1/', combat1Router);
+app.use('/api/combatBelong/', combatBelongRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,4 +1,4 @@
-<!-- 실시간 병력 확인 페이지 -->
+<!-- 실시간 병력 확인 페이지
 <template>
     <div class="py-4 container-fluid">
       <div class=" row">
@@ -29,4 +29,4 @@
     },
   };
   </script>
-  
+   -->

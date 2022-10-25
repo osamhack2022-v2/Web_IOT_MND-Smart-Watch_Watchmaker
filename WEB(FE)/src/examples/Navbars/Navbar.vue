@@ -227,18 +227,17 @@ export default {
     apply(){
       
        axios.get('/api/combatInfo1/'+this.keyword).then((res)=>{
-                //console.log(this.keyword)
                 console.log(res.data);
             }).catch(error=>{
                 console.log(error);
                 throw new Error(error);
             });
-       /*axios.get('/api/combatInfo1').then((res)=>{
+       axios.get('/api/combatBelong/'+this.keyword).then((res)=>{
                 console.log(res.data);
             }).catch(error=>{
                 console.log(error);
                 throw new Error(error);
-            });*/
+            });
 
     }
   },

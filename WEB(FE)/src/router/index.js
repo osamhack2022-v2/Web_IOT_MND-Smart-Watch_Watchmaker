@@ -7,7 +7,8 @@ import Profile from "../views/Profile.vue";
 import Signup from "../views/Signup.vue";
 import Signin from "../views/Signin.vue";
 import TableEdit from "../views/TableEdit.vue";
-import CombatDashboard from "../views/CombatDashboard.vue";
+//import CombatDashboard from "../views/CombatDashboard.vue";
+import SelectCombatGroup from "../views/SelectCombatGroup.vue";
 
 const routes = [
   {
@@ -52,8 +53,8 @@ const routes = [
   },
   {
     path: "/combat-dashboard",
-    name: "CombatDashboard",
-    component: CombatDashboard,
+    name: "SelectCombatGroup",
+    component: SelectCombatGroup,
   },
 ];
 
