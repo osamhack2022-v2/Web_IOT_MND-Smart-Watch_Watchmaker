@@ -4,7 +4,12 @@
       <div class="col-lg-8">
         <div class="row mt-4">
           <div class="col-xl-12 mb-xl-0 mb-4">
-            <billing-card />
+            <output-card />
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-xl-12 mb-xl-0 mb-4">
+            <input-card />
           </div>
         </div>
       </div>
@@ -19,13 +24,15 @@
 <script>
 
 import InvoiceCard from "./components/InvoiceCard.vue";
-import BillingCard from "./components/BillingCard.vue";
+import OutputCard from "./components/OutputCard.vue";
+import InputCard from "./components/Inputcard.vue";
 
 export default {
   name: "Billing",
   components: {
     InvoiceCard,
-    BillingCard,
+    OutputCard,
+    InputCard,
   },
   data() {
     return {
