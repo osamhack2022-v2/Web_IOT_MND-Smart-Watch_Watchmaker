@@ -1,30 +1,78 @@
-<!-- 특이사항 카드 -->
 <template>
-    <div class="card">
-      <div class="card-header pb-0 px-3">
-        <h6 class="mb-0">32전대</h6>
-      </div>
-      <div class="card-body pt-4 p-3">
-        <ul class="list-group">
-          <li class="mb-2 border-0 list-group-item d-flex justify-content-start border-radius-lg">
-            <div class="text-center shadow icon icon-shape icon-sm bg-gradient-dark">
-              <i class="ni ni-circle-08 text-white opacity-10"></i>
-            </div>
+  <div class="card" style="height:100%;" >
+    <div class="p-3 pb-0 card-header">
+      <h6 class="mb-0">{{ cardTitle }}</h6>
+    </div>
+    <div class="p-3 card-body">
+      <ul class="list-group" :class="this.$store.state.isRTL ? 'pe-0' : ''">
+        <li v-for="user in userDataFromDashboard" v-bind:key="user.index"
+          class="mb-2 border-0 list-group-item d-flex justify-content-between border-radius-lg"
+          :class="this.$store.state.isRTL ? 'pe-0' : 'ps-0'"
+        >
+        
+          <div class="d-flex align-items-center">
+          <div v-if="user.heartrate == 0 " >
+            <div
+              class="text-center shadow icon icon-shape icon-sm bg-gradient-dark"
+              :class="this.$store.state.isRTL ? 'ms-3' : 'me-3'"
+            >
+
+              <i class="ni ni-favourite-28 text-white opacity-10"></i>
+          </div>
+          </div>
+          <div v-else-if = "user.heartrate>200 || user.heartrate<35">
+            <div
+              class="text-center shadow icon icon-shape icon-sm bg-gradient-danger"
+              :class="this.$store.state.isRTL ? 'ms-3' : 'me-3'"
+            >
+
+              <i class="ni ni-favourite-28 text-white opacity-10"></i>
+          </div>
+          </div>
+          <div v-else>
+            <div
+              class="text-center shadow icon icon-shape icon-sm bg-gradient-success"
+              :class="this.$store.state.isRTL ? 'ms-3' : 'me-3'"
+            >
+
+              <i class="ni ni-favourite-28 text-white opacity-10"></i>
+          </div>
+          </div>
+
             <div class="d-flex flex-column">
-              <h6 class="mb-1 text-sm text-dark">병장 최수호</h6>
+              <h6 class="mb-1 text-sm text-dark">{{ user.name }}</h6>
               <span class="text-xs">
-                심박수 : 90bpm 산소포화도 : 97%
+                {{ user.heartrate }}
               </span>
             </div>
-          </li>
-        </ul>
-      </div>
+          </div>
+          <div class="d-flex">
+            <button
+              class="my-auto btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right"
+            >
+              <i class="ni ni-bold-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </li>
+      </ul>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    name: "combat-card",
-  };
-  </script>
-  
+  </div>
+</template>
+<script>
+
+export default {
+  props: {
+    userDataFromDashboard: Object,
+    cardTitle: String,
+  },
+  created () {    
+
+  },
+
+  data(){
+    return{
+      users: {}
+    }
+  }
+};
+</script>

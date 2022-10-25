@@ -26,7 +26,7 @@ router.get('/:keyword', function(req, res, next) {
     if(err){
       throw err;
     }
-    //rows.forEach((row,index)=>{ row.index=index })
+    rows.forEach((row,index)=>{ row.index=index })
     //console.log(rows)
     res.send(rows)
 

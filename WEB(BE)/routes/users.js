@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
       }
   });
   
-  const getQuery = `SELECT name, belong, rank, number, working, location, tagID FROM Users ORDER BY number ASC`;
+  const getQuery = `SELECT * FROM Users ORDER BY number ASC`;
 db.serialize(()=>{
   db.all(getQuery,[],(err, rows ) =>{
       if(err){
