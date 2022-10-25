@@ -100,7 +100,7 @@ export default {
       stats: {
         user: {
           title: "총 인원",
-          value: "141",
+          value: "",
           percentage: "",
           iconClass: "ni ni-users",
           detail: "",
@@ -108,7 +108,7 @@ export default {
         },
         vacation: {
           title: "휴가",
-          value: "17",
+          value: "",
           percentage: "",
           iconClass: "ni ni-world",
           iconBackground: "bg-gradient-danger",
@@ -116,7 +116,7 @@ export default {
         },
         out: {
           title: "외출",
-          value: "6",
+          value: "",
           percentage: "",
           iconClass: "ni ni-paper-diploma",
           percentageColor: "text-danger",
@@ -125,24 +125,11 @@ export default {
         },
         working: {
           title: "근무",
-          value: 0,
+          value: "",
           percentage: "",
           iconClass: "ni ni-cart",
           iconBackground: "bg-gradient-warning",
           detail: "",
-        },
-        user_detail: {
-          title: "총 인원 세부사항",
-          detail: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        },
-        vacation_detail: {
-
-        },
-        out_detail: {
-
-        },
-        working_detail: {
-
         }
       },
 
