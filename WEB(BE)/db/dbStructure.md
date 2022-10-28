@@ -1,6 +1,6 @@
 
 Insert Into Users(name,belong,rank,number,working,location,heartrate,tagID) Values ("서지혁", "체계대대 통신중대 3조","일병","22-70012345","근무Off","복지시설",0, 101278 );
-Insert Into Users(name,belong,rank,number,working,location,heartrate) Values ("서지혁", "체계대대 통신중대 2조","병장","21-70012333","근무On","AAOC",0 );
+Insert Into Users(name,belong,rank,number,working,location,heartrate) Values ("서지혁", "체계대대 통신중대 2조","병장","21-70012333","근무On","AAOC",32 );
 Insert Into Users(name,belong,rank,number,working,location,heartrate) Values ("박원", "체계대대 운영중대 3조","일병","22-70000000","근무On","AAOC",0 );
 Insert Into Users(name,belong,rank,number,working,location,heartrate) Values ("최영인", "3통제대 식별반","일병","22-70008084","근무On","AAOC",0 );
 

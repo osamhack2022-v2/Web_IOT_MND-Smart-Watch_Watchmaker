@@ -17,7 +17,7 @@
               :class="this.$store.state.isRTL ? 'ms-3' : 'me-3'"
             >
 
-              <i class="ni ni-favourite-28 text-white opacity-10"></i>
+              <i class="ni ni-sound-wave text-white opacity-10"></i>
           </div>
           </div>
           <div v-else-if = "user.heartrate>200 || user.heartrate<35">
@@ -26,7 +26,7 @@
               :class="this.$store.state.isRTL ? 'ms-3' : 'me-3'"
             >
 
-              <i class="ni ni-favourite-28 text-white opacity-10"></i>
+              <i class="ni ni-sound-wave text-white opacity-10"></i>
           </div>
           </div>
           <div v-else>
@@ -35,22 +35,34 @@
               :class="this.$store.state.isRTL ? 'ms-3' : 'me-3'"
             >
 
-              <i class="ni ni-favourite-28 text-white opacity-10"></i>
+              <i class="ni ni-sound-wave text-white opacity-10"></i>
           </div>
           </div>
 
             <div class="d-flex flex-column">
               <h6 class="mb-1 text-sm text-dark">{{ user.name }}</h6>
               <span class="text-xs">
-                {{ user.heartrate }}
+                {{ user.heartrate }} bpm  
               </span>
+              <span class="text-xs">
+                {{user.spo2}} %
+              </span>
+
             </div>
           </div>
           <div class="d-flex">
+
             <button
-              class="my-auto btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right"
+              class="my-auto btn btn-link btn-icon-only btn-rounded text-dark icon-move-right"
             >
-              <i class="ni ni-bold-right" aria-hidden="true"></i>
+            <div v-if="user.operation=='작전대기'">
+              <span class="badge bg-gradient-secondary">{{user.operation}}</span> 
+            </div>
+
+            <div v-else>
+              <span class="badge bg-gradient-success">{{user.operation}}</span>
+            </div>
+
             </button>
           </div>
         </li>
