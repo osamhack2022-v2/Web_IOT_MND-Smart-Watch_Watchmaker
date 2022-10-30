@@ -11,8 +11,7 @@ router.get('/:keyword', function(req, res, next) {
   
   const path = require('path'); 
   const dbPath = path.resolve(__dirname, './../db/UserDatabase.db');
-  const checkQuery = 'SELECT * from sqlite_master where tbl_name="_'+key+'"';
-  const getQuery = `SELECT * FROM _`+key;
+  const getQuery = `SELECT * FROM "_`+key+'" where 0<(select count(*) from sqlite_master where tbl_name="_'+key+'")';
 
   let db = new sqlite3.Database(dbPath, sqlite3.OPEN_READWRITE, (err) => {
     if (err) {
@@ -23,23 +22,13 @@ router.get('/:keyword', function(req, res, next) {
     }
   });
 
-  db.all(checkQuery,[],(err,rows) =>{
-    if(err){
-      throw err;
-    }
-    if(rows.length>=1){
-      db.all(getQuery,function (err,rows)
-      {
-        //console.log(rows)
-        if(err){
-          throw err;
-        }
-        rows.forEach((row,index)=>{ row.index=index })
-        //console.log(rows)
-        res.send(rows)
+  db.all(getQuery,[],(err,rows) =>{
+      if(err){
+        throw err;
       }
-    )
-    }
+      rows.forEach((row,index)=>{ row.index=index })
+      console.log(rows)
+      res.send(rows)
   });
 
   db.close();
