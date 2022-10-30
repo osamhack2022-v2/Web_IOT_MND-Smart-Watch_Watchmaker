@@ -23,6 +23,8 @@
     - 휴가 및 외출 인원(군번, 출타시간, 휴가기간 등) 
 - 전달 사항 / 특이사항
 - 관리자 로그인/로그아웃 기능
+![1](https://user-images.githubusercontent.com/71062855/198877017-2cf1f060-2257-42ad-a19c-192b30c681b3.png)
+![2](https://user-images.githubusercontent.com/71062855/198877097-518bddf5-f37b-41d9-a48d-68b9b01f8de7.png)
 
 
 ### Iot(아두이노)
