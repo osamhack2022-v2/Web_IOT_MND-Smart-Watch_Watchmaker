@@ -1,8 +1,16 @@
 
 Insert Into Users(name,belong,rank,number,working,location,heartrate,tagID) Values ("서지혁", "체계대대 통신중대 3조","일병","22-70012345","근무Off","복지시설",0, 101278 );
 Insert Into Users(name,belong,rank,number,working,location,heartrate) Values ("서지혁", "체계대대 통신중대 2조","병장","21-70012333","근무On","AAOC",32 );
-Insert Into Users(name,belong,rank,number,working,location,heartrate) Values ("박원", "체계대대 운영중대 3조","일병","22-70000000","근무On","AAOC",0 );
+Insert Into Users(name,belong,rank,number,working,location,heartrate) Values ("박원", "체계대대 운영중대 3조","일병","22-70007066","근무On","AAOC",0 );
 Insert Into Users(name,belong,rank,number,working,location,heartrate) Values ("최영인", "3통제대 식별반","일병","22-70008084","근무On","AAOC",0 );
+Insert Into Users Values ("김기현", "3통제대 식별반","상병","22-70001071","근무Off","외출",170, 97,141241, "작전대기" );
+Insert Into Users Values ("안현호", "3통제대 공중감시반","병장","21-70020071","근무On","AAOC",110, 99,141241, "작전대기" );
+
+Insert Into Users Values ("고준영", "체계대대 정비중대 3조","병장","21-7001071","근무On","08-라",170, 97,141241, "작전중" );
+Insert Into Users Values ("유희헌", "체계대대 정비중대 3조","병장","21-70013431","근무On","08-사",130, 95,141342, "작전중" );
+Insert Into Users  Values ("손은혁", "체계대대 운영통제실 3조","병장","22-70002002","근무On","08-라",202, 89, 171241, "작전중" );
+Insert Into Users  Values ("홍산", "체계대대 운영통제실 3조","일병","22-70013037","근무On","08-사",80, 99, 174447, "작전중" );
+
 
 Select substr( belong,0, instr(belong,' ')+1) ,  count( *) from Users group by substr(belong,0, instr(belong,' ')+1);
 

@@ -23,7 +23,7 @@
 
             <div class="col-lg-3" v-for="group in searchResult" v-bind:key="group.index">
                 <div>
-                <combat-card v-bind:userDataFromDashboard="users.filter(user => user.belong.indexOf(group.name)!=-1)" v-bind:cardTitle="group.name" />
+                <combat-card v-bind:userDataFromDashboard="users.filter(user => user.belong.indexOf(group.name)!=-1)" v-bind:cardTitle="group.name" v-bind:leader="group.leaderRank+' '+group.leader" />
                 </div>
             </div>
 

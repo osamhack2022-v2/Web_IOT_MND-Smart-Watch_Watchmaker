@@ -2,6 +2,9 @@
   <div class="card" style="height:100%;" >
     <div class="p-3 pb-0 card-header">
       <h6 class="mb-0">{{ cardTitle }}</h6>
+        <span class="text-xs">
+                {{cardTitle}}장 {{leader}}
+        </span>
     </div>
     <div class="p-3 card-body">
       <ul class="list-group" :class="this.$store.state.isRTL ? 'pe-0' : ''">
@@ -56,7 +59,7 @@
               class="my-auto btn btn-link btn-icon-only btn-rounded text-dark icon-move-right"
             >
             <div v-if="user.operation=='작전대기'">
-              <span class="badge bg-gradient-secondary">{{user.operation}}</span> 
+              <span class="badge badge-sm bg-gradient-secondary">{{user.operation}}</span> 
             </div>
 
             <div v-else>
@@ -76,6 +79,7 @@ export default {
   props: {
     userDataFromDashboard: Object,
     cardTitle: String,
+    leader: String,
   },
   created () {    
 
