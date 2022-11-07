@@ -24,3 +24,6 @@ $ pip install tensorflow
 ```
 import tensorflow as tf  
 ```
+
+대회 가이드  
+https://aiconnect.kr/competition/detail/214/task/251/competition_notice/detail/701
