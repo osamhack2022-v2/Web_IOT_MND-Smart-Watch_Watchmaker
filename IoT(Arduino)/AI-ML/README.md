@@ -29,6 +29,7 @@ $ pip install
 ```
 import tensorflow as tf  
 ```
+<<<<<<< HEAD
 ssh root@118.67.129.36 -p 22
 U5ANtJ=E9G7%t
 cd ../workspace/data
@@ -38,3 +39,6 @@ pip install pickle5
 pip install opencv-python
 pip install segmentation-models-pytorch
 $ conda create --name <env> --file <this file>
+
+대회 가이드  
+https://aiconnect.kr/competition/detail/214/task/251/competition_notice/detail/701
