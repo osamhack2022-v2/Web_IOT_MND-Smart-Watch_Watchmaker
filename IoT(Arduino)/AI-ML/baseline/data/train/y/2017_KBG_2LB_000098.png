@@ -1,0 +1,21 @@
+untu", "Droid Sans", sans-serif;
+	}
+
+	:host-context(.mac) { font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+	:host-context(.mac:lang(zh-Hans)) { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif; }
+	:host-context(.mac:lang(zh-Hant)) { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", sans-serif; }
+	:host-context(.mac:lang(ja)) { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic Pro", sans-serif; }
+	:host-context(.mac:lang(ko)) { font-family: -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Apple SD Gothic Neo", "AppleGothic", sans-serif; }
+
+	:host-context(.windows) { font-family: "Segoe WPC", "Segoe UI", sans-serif; }
+	:host-context(.windows:lang(zh-Hans)) { font-family: "Segoe WPC", "Segoe UI", "Microsoft YaHei", sans-serif; }
+	:host-context(.windows:lang(zh-Hant)) { font-family: "Segoe WPC", "Segoe UI", "Microsoft Jhenghei", sans-serif; }
+	:host-context(.windows:lang(ja)) { font-family: "Segoe WPC", "Segoe UI", "Yu Gothic UI", "Meiryo UI", sans-serif; }
+	:host-context(.windows:lang(ko)) { font-family: "Segoe WPC", "Segoe UI", "Malgun Gothic", "Dotom", sans-serif; }
+
+	:host-context(.linux) { font-family: system-ui, "Ubuntu", "Droid Sans", sans-serif; }
+	:host-context(.linux:lang(zh-Hans)) { font-family: system-ui, "Ubuntu", "Droid Sans", "Source Han Sans SC", "Source Han Sans CN", "Source Han Sans", sans-serif; }
+	:host-context(.linux:lang(zh-Hant)) { font-family: system-ui, "Ubuntu", "Droid Sans", "Source Han Sans TC", "Source Han Sans TW", "Source Han Sans", sans-serif; }
+	:host-context(.linux:lang(ja)) { font-family: system-ui, "Ubuntu", "Droid Sans", "Source Han Sans J", "Source Han Sans JP", "Source Han Sans", sans-serif; }
+	:host-context(.linux:lang(ko)) { font-family: system-ui, "Ubuntu", "Droid Sans", "Source Han Sans K", "Source Han Sans JR", "Source Han Sans", "UnDotum", "FBaekmuk Gulim", sans-serif; }
+`}),define(ae[268],le([1,0,9,66,48,26,1002]),function(J,e,t,m,R,L){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.CountBadge=void 0;const k={badgeBackground:m.Color.fromHex("#4D4D4D"),badgeForeground:m.Color.fromHex("#FFFFFF")};class w{constructor(b,S){this.count=0,this.options=S||Object.create(null),(0,R.mixin)(this.options,k,!1),this.badgeBackground=this.options.badgeBackground,this.badgeForeground=this.options.badgeForeground,this.badgeBorder=this.options.badgeBorder,this.element=(0,t.append)(b,(0,t.$)(".monaco-count-badge")),this.countFormat=this.options.countFormat||"{0}",this.titleFormat=this.options.titleFormat||"",this.setCount(this.options.count||0)}setCount(b){this.count=b,this.render()}setCountFormat(b){this.countFormat=b,this.render()}setTitleFormat(b){this.titleFormat=b,this.render()}render(){this.element.textContent=(0,L.format)(this.countFormat,this.count),this.element.title=(0,L.format)(this.titleFormat,this.count),this.

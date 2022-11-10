@@ -1,0 +1,26 @@
+s.container=c,this.useFixedPosition=n!==1,this.useShadowDOM=n===3,this.useShadowDOM){this.shadowRootHostElement=m.$(".shadow-root-host"),this.container.appendChild(this.shadowRootHostElement),this.shadowRoot=this.shadowRootHostElement.attachShadow({mode:"open"});const s=document.createElement("style");s.textContent=f,this.shadowRoot.appendChild(s),this.shadowRoot.appendChild(this.view),this.shadowRoot.appendChild(m.$("slot"))}else this.container.appendChild(this.view);const l=new R.DisposableStore;i.BUBBLE_UP_EVENTS.forEach(s=>{l.add(m.addStandardDisposableListener(this.container,s,a=>{this.onDOMEvent(a,!1)}))}),i.BUBBLE_DOWN_EVENTS.forEach(s=>{l.add(m.addStandardDisposableListener(this.container,s,a=>{this.onDOMEvent(a,!0)},!0))}),this.toDisposeOnSetContainer=l}}show(c){this.isVisible()&&this.hide(),m.clearNode(this.view),this.view.className="context-view",this.view.style.top="0px",this.view.style.left="0px",this.view.style.zIndex="2575",this.view.style.position=this.useFixedPosition?"fixed":"absolute",m.show(this.view),this.toDisposeOnClean=c.render(this.view)||R.Disposable.None,this.delegate=c,this.doLayout(),this.delegate.focus?.()}getViewElement(){return this.view}layout(){if(!!this.isVisible()){if(this.delegate.canRelayout===!1&&!(L.isIOS&&t.BrowserFeatures.pointerEvents)){this.hide();return}this.delegate.layout&&this.delegate.layout(),this.doLayout()}}doLayout(){if(!this.isVisible())return;const c=this.delegate.getAnchor();let n;if(m.isHTMLElement(c)){const E=m.getDomNodePagePosition(c),D=m.getDomNodeZoomLevel(c);n={top:E.top*D,left:E.left*D,width:E.width*D,height:E.height*D}}else n={top:c.y,left:c.x,width:c.width||1,height:c.height||2};const l=m.getTotalWidth(this.view),s=m.getTotalHeight(this.view),a=this.delegate.anchorPosition||0,o=this.delegate.anchorAlignment||0,g=this.delegate.anchorAxisAlignment||0;let d,v;if(g===0){const E={offset:n.top-window.pageYOffset,size:n.height,position:a===0?0:1},D={offset:n.left,size:n.width,position:o===0?0:1,mode:r.ALIGN};d=h(window.innerHeight,s,E)+window.pageYOffset,k.Range.intersects({start:d,end:d+s},{start:E.offset,end:E.offset+E.size})&&(D.mode=r.AVOID),v=h(window.innerWidth,l,D)}else{const E={offset:n.left,size:n.width,position:o===0?0:1},D={offset:n.top,size:n.height,position:a===0?0:1,mode:r.ALIGN};v=h(window.innerWidth,l,E),k.Range.intersects({start:v,end:v+l},{start:E.offset,end:E.offset+E.size})&&(D.mode=r.AVOID),d=h(window.innerHeight,s,D)+window.pageYOffset}this.view.classList.remove("top","bottom","left","right"),this.view.classList.add(a===0?"bottom":"top"),this.view.classList.add(o===0?"left":"right"),this.view.classList.toggle("fixed",this.useFixedPosition);const p=m.getDomNodePagePosition(this.container);this.view.style.top=`${d-(this.useFixedPosition?m.getDomNodePagePosition(this.view).top:p.top)}px`,this.view.style.left=`${v-(this.useFixedPosition?m.getDomNodePagePosition(this.view).left:p.left)}px`,this.view.style.width="initial"}hide(c){const n=this.delegate;this.delegate=null,n?.onHide&&n.onHide(c),this.toDisposeOnClean.dispose(),m.hide(this.view)}isVisible(){return!!this.delegate}onDOMEvent(c,n){this.delegate&&(this.delegate.onDOMEvent?this.delegate.onDOMEvent(c,document.activeElement):n&&!m.isAncestor(c.target,this.container)&&this.hide())}dispose(){this.hide(),super.dispose()}}e.ContextView=i,i.BUBBLE_UP_EVENTS=["click","keydown","focus","blur"],i.BUBBLE_DOWN_EVENTS=["click"];const f=`
+	:host {
+		all: initial; /* 1st rule so subsequent properties are reset. */
+	}
+
+	@font-face {
+		font-family: "codicon";
+		font-display: block;
+		src: url("./codicon.ttf?5d4d76ab2ce5108968ad644d591a16a6") format("truetype");
+	}
+
+	.codicon[class*='codicon-'] {
+		font: normal normal normal 16px/1 codicon;
+		display: inline-block;
+		text-decoration: none;
+		text-rendering: auto;
+		text-align: center;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+
+	:host {
+		font

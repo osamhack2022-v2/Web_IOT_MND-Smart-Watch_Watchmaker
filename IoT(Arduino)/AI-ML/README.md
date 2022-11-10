@@ -20,7 +20,21 @@ $ pip install numpy
 $ pip install pandas  
 $ pip install matplotlib  
 $ pip install tensorflow  
+
+======  
+$ pip install pickle5
+$ pip install pyyaml
+$ pip install 
 ```
 ```
 import tensorflow as tf  
 ```
+ssh root@118.67.129.36 -p 22
+U5ANtJ=E9G7%t
+cd ../workspace/data
+
+conda install pytorch torchvision -c pytorch
+pip install pickle5
+pip install opencv-python
+pip install segmentation-models-pytorch
+$ conda create --name <env> --file <this file>
